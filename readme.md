@@ -10,14 +10,16 @@
 
     import multtestlib  
     def main():
+    
     a = 90  
     b = 35  
     c = 12
+    
     with multtestlib.Pool() as pool:
 	    pool.starmap(multtestlib.test_equal,
-		    [(a, 90),
-    		 (b, 35),  
-    		 (c, 12)])
+		[(a, 90),
+		 (b, 35),
+		 (c, 12)])
     		 
     if __name__ == "__main__":  
         multtestlib.init()  
@@ -35,6 +37,6 @@
 
 **Generated Files**
 
-filepass.txt -> Contains passed tests
-filefail.txt -> Contains failed tests
-filetot.txt -> Contains all tests
+    filepass.txt -> Contains passed tests
+    filefail.txt -> Contains failed tests
+    filetot.txt -> Contains all tests
