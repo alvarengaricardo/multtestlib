@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: multtestlib
-Version: 2022.1
-Summary: Biblioteca para execução de testes de unidade utilizando processamento paralelo.
+Version: 2023.1
+Summary: Library for executing unit tests, in Python, using parallel processing.
 Author-email: Ricardo Alvarenga <alvarenga.r.ricardo@gmail.com>
 License: Copyright (c) 2022 Ricardo Ribeiro de Alvarenga
         
@@ -22,6 +22,7 @@ License: Copyright (c) 2022 Ricardo Ribeiro de Alvarenga
          LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
          OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
          THE SOFTWARE.
+Project-URL: Homepage, https://github.com/alvarengaricardo/multtestlib
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
@@ -31,6 +32,9 @@ License-File: LICENSE
 
 # multtestlib
 
-**multtestlib** é uma biblioteca para execução
-de testes de unidade utilizando processamento
-paralelo escrito em Python
+**multtestlib** is a library for running unit tests using processing parallel, written in Python.
+
+
+
+![image-20230301234134049](C:\Users\Ricardo\AppData\Roaming\Typora\typora-user-images\image-20230301234134049.png)
+
