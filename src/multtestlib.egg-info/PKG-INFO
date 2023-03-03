@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: multtestlib
-Version: 2023.2
+Version: 2023.3
 Summary: Library for executing unit tests, in Python, using parallel processing.
 Author-email: Ricardo Alvarenga <alvarenga.r.ricardo@gmail.com>
 License: Copyright (c) 2022 Ricardo Ribeiro de Alvarenga
