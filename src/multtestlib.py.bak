@@ -105,10 +105,16 @@ def line2(ff, a, b, expected, received):
 def init():
     if os.path.exists('filetot.txt'):
         os.remove('filetot.txt')
-        
+        # print("removido filetot.txt")
+    # else:
+    # print("filetot.txt does not exist")
+
     if os.path.exists('filepass.txt'):
         os.remove('filepass.txt')
- 
+    #    print("removido filefail.txt")
+    # else:
+    #    print("filepass.txt does not exist")
+
     if os.path.exists('filefail.txt'):
         os.remove('filefail.txt')
 
