@@ -1,7 +1,5 @@
 from multiprocessing import freeze_support, Pool, cpu_count
 import os
-#import src
-
 
 def test_equal(a, b):
     line = line1('test_equal', a, b)
@@ -93,7 +91,6 @@ def test_less_equal(a, b):
 
 
 def line1(t, a, b=""):
-    #  s = str(type(a))
     return str(t) + ' - ' + 'a: ' + str(a) + ' b: ' + str(b) + ' Result: '
 
 
