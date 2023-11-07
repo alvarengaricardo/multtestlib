@@ -2,9 +2,6 @@ import os
 from concurrent.futures import ThreadPoolExecutor
 
 
-
-### ISSO FUNCIONA !!!!!!
-
 def run_test1(input_item, expected_item, process_function, operador):
     result = process_function(input_item)
     line = line1a('test_equal', process_function, input_item, result, expected_item)
@@ -25,9 +22,9 @@ def run_test3(input_item, expected_item, input2_item, process_function, operador
     # filepass(line) if result == expected_item else filefail(line)
     filepass(line) if operador(result, expected_item) else filefail(line)
 
+
 def test_equal(cpus, input1, expected, process_function=None, input2=None):
     igual = lambda x, y: x == y
-
 
     if not isinstance(input1, list):
         input1 = [input1]
@@ -52,13 +49,30 @@ def test_equal(cpus, input1, expected, process_function=None, input2=None):
                 executor.submit(run_test3, input_item, expected_item, input2_item, process_function, igual)
 
 
+def test_not_equal(cpus, input1, expected, process_function=None, input2=None):
+    igual = lambda x, y: x != y
 
-def test_not_equal(a, b):
-    line = line1('test_not_equal', a, b)
+    if not isinstance(input1, list):
+        input1 = [input1]
+    if not isinstance(expected, list):
+        expected = [expected]
 
-    with ThreadPoolExecutor(max_workers=os.cpu_count()) as executor:
-        future = executor.submit(filepass, line) if a != b else executor.submit(filefail, line)
-        future.result()
+    if (input2 is None) and (process_function is not None):
+        with ThreadPoolExecutor(max_workers=cpus) as executor:
+            for input_item, expected_item in zip(input1, expected):
+                executor.submit(run_test1, input_item, expected_item, process_function, igual)
+
+    if (input2 is None) and (process_function is None):
+        with ThreadPoolExecutor(max_workers=cpus) as executor:
+            for input_item, expected_item in zip(input1, expected):
+                executor.submit(run_test2, input_item, expected_item, igual)
+
+    if (input2 is not None) and (process_function is not None):
+        if not isinstance(input2, list):
+            input2 = [input2]
+        with ThreadPoolExecutor(max_workers=cpus) as executor:
+            for input_item, expected_item, input2_item in zip(input1, expected, input2):
+                executor.submit(run_test3, input_item, expected_item, input2_item, process_function, igual)
 
 
 def line1a(test, ff, input, result, expected):
@@ -168,8 +182,6 @@ def sos():
     print("-----------------------------------------------")
     print("test_equal                a == b")
     print("test_not_equal            a != b")
-    print("test_func                 function(a, b) == c")
-    print("test_not_func             function(a, b) != c")
     print("test_is                   is a b")
     print("test_is_not               is a not b")
     print("test_in                   is a in b")
