@@ -1,0 +1,7 @@
+test_equal input: 5 expected: 4 received: 5 Result: Fail
+test_equal input: 5 expected: 4 received: 5 Result: Fail
+test_equal input: 5 expected: 4 received: 5 Result: Fail
+test_equal input: 5 expected: 4 received: 5 Result: Fail
+test_equal input: 5 expected: 4 received: 5 Result: Fail
+
+Failed: 5
