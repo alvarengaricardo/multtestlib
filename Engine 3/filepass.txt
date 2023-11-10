@@ -1,143 +1,32 @@
-test_equal input: 2 expected: 2 received: 2 Result: Pass
-test_equal input: 1 expected: 1 received: 1 Result: Pass
-test_equal input: 3 expected: 3 received: 3 Result: Pass
-test_equal input: 4 expected: 4 received: 4 Result: Pass
-test_equal input: 6 expected: 6 received: 6 Result: Pass
-test_equal input: 7 expected: 7 received: 7 Result: Pass
-test_equal input: 8 expected: 8 received: 8 Result: Pass
-test_equal input: 9 expected: 9 received: 9 Result: Pass
-test_equal input: 10 expected: 10 received: 10 Result: Pass
-test_equal input: 11 expected: 11 received: 11 Result: Pass
-test_equal input: 13 expected: 13 received: 13 Result: Pass
-test_equal input: 12 expected: 12 received: 12 Result: Pass
-test_equal input: 14 expected: 14 received: 14 Result: Pass
-test_equal input: 15 expected: 15 received: 15 Result: Pass
-test_equal input: 17 expected: 17 received: 17 Result: Pass
-test_equal input: 16 expected: 16 received: 16 Result: Pass
-test_equal input: 18 expected: 18 received: 18 Result: Pass
-test_equal input: 19 expected: 19 received: 19 Result: Pass
-test_equal input: 22 expected: 22 received: 22 Result: Pass
-test_equal input: 20 expected: 20 received: 20 Result: Pass
-test_equal input: 21 expected: 21 received: 21 Result: Pass
-test_equal input: 24 expected: 24 received: 24 Result: Pass
-test_equal input: 23 expected: 23 received: 23 Result: Pass
-test_equal input: 25 expected: 25 received: 25 Result: Pass
-test_equal input: 26 expected: 26 received: 26 Result: Pass
-test_equal input: 27 expected: 27 received: 27 Result: Pass
-test_equal input: 28 expected: 28 received: 28 Result: Pass
-test_equal input: 30 expected: 30 received: 30 Result: Pass
-test_equal input: 29 expected: 29 received: 29 Result: Pass
-test_equal input: 2 expected: 2 received: 2 Result: Pass
-test_equal input: 4 expected: 4 received: 4 Result: Pass
-test_equal input: 1 expected: 1 received: 1 Result: Pass
-test_equal input: 3 expected: 3 received: 3 Result: Pass
-test_equal input: 7 expected: 7 received: 7 Result: Pass
-test_equal input: 6 expected: 6 received: 6 Result: Pass
-test_equal input: 8 expected: 8 received: 8 Result: Pass
-test_equal input: 9 expected: 9 received: 9 Result: Pass
-test_equal input: 11 expected: 11 received: 11 Result: Pass
-test_equal input: 10 expected: 10 received: 10 Result: Pass
-test_equal input: 12 expected: 12 received: 12 Result: Pass
-test_equal input: 13 expected: 13 received: 13 Result: Pass
-test_equal input: 14 expected: 14 received: 14 Result: Pass
-test_equal input: 15 expected: 15 received: 15 Result: Pass
-test_equal input: 16 expected: 16 received: 16 Result: Pass
-test_equal input: 18 expected: 18 received: 18 Result: Pass
-test_equal input: 17 expected: 17 received: 17 Result: Pass
-test_equal input: 20 expected: 20 received: 20 Result: Pass
-test_equal input: 19 expected: 19 received: 19 Result: Pass
-test_equal input: 21 expected: 21 received: 21 Result: Pass
-test_equal input: 24 expected: 24 received: 24 Result: Pass
-test_equal input: 22 expected: 22 received: 22 Result: Pass
-test_equal input: 23 expected: 23 received: 23 Result: Pass
-test_equal input: 25 expected: 25 received: 25 Result: Pass
-test_equal input: 27 expected: 27 received: 27 Result: Pass
-test_equal input: 28 expected: 28 received: 28 Result: Pass
-test_equal input: 29 expected: 29 received: 29 Result: Pass
-test_equal input: 30 expected: 30 received: 30 Result: Pass
-test_equal input: 1 expected: 1 received: 1 Result: Pass
-test_equal input: 2 expected: 2 received: 2 Result: Pass
-test_equal input: 3 expected: 3 received: 3 Result: Pass
-test_equal input: 4 expected: 4 received: 4 Result: Pass
-test_equal input: 6 expected: 6 received: 6 Result: Pass
-test_equal input: 7 expected: 7 received: 7 Result: Pass
-test_equal input: 8 expected: 8 received: 8 Result: Pass
-test_equal input: 10 expected: 10 received: 10 Result: Pass
-test_equal input: 11 expected: 11 received: 11 Result: Pass
-test_equal input: 9 expected: 9 received: 9 Result: Pass
-test_equal input: 13 expected: 13 received: 13 Result: Pass
-test_equal input: 14 expected: 14 received: 14 Result: Pass
-test_equal input: 12 expected: 12 received: 12 Result: Pass
-test_equal input: 15 expected: 15 received: 15 Result: Pass
-test_equal input: 16 expected: 16 received: 16 Result: Pass
-test_equal input: 17 expected: 17 received: 17 Result: Pass
-test_equal input: 18 expected: 18 received: 18 Result: Pass
-test_equal input: 20 expected: 20 received: 20 Result: Pass
-test_equal input: 21 expected: 21 received: 21 Result: Pass
-test_equal input: 22 expected: 22 received: 22 Result: Pass
-test_equal input: 23 expected: 23 received: 23 Result: Pass
-test_equal input: 24 expected: 24 received: 24 Result: Pass
-test_equal input: 25 expected: 25 received: 25 Result: Pass
-test_equal input: 26 expected: 26 received: 26 Result: Pass
-test_equal input: 27 expected: 27 received: 27 Result: Pass
-test_equal input: 28 expected: 28 received: 28 Result: Pass
-test_equal input: 30 expected: 30 received: 30 Result: Pass
-test_equal input: 1 expected: 1 received: 1 Result: Pass
-test_equal input: 2 expected: 2 received: 2 Result: Pass
-test_equal input: 3 expected: 3 received: 3 Result: Pass
-test_equal input: 4 expected: 4 received: 4 Result: Pass
-test_equal input: 6 expected: 6 received: 6 Result: Pass
-test_equal input: 7 expected: 7 received: 7 Result: Pass
-test_equal input: 8 expected: 8 received: 8 Result: Pass
-test_equal input: 10 expected: 10 received: 10 Result: Pass
-test_equal input: 9 expected: 9 received: 9 Result: Pass
-test_equal input: 11 expected: 11 received: 11 Result: Pass
-test_equal input: 12 expected: 12 received: 12 Result: Pass
-test_equal input: 14 expected: 14 received: 14 Result: Pass
-test_equal input: 13 expected: 13 received: 13 Result: Pass
-test_equal input: 16 expected: 16 received: 16 Result: Pass
-test_equal input: 17 expected: 17 received: 17 Result: Pass
-test_equal input: 18 expected: 18 received: 18 Result: Pass
-test_equal input: 19 expected: 19 received: 19 Result: Pass
-test_equal input: 20 expected: 20 received: 20 Result: Pass
-test_equal input: 21 expected: 21 received: 21 Result: Pass
-test_equal input: 22 expected: 22 received: 22 Result: Pass
-test_equal input: 23 expected: 23 received: 23 Result: Pass
-test_equal input: 24 expected: 24 received: 24 Result: Pass
-test_equal input: 25 expected: 25 received: 25 Result: Pass
-test_equal input: 26 expected: 26 received: 26 Result: Pass
-test_equal input: 27 expected: 27 received: 27 Result: Pass
-test_equal input: 28 expected: 28 received: 28 Result: Pass
-test_equal input: 30 expected: 30 received: 30 Result: Pass
-test_equal input: 29 expected: 29 received: 29 Result: Pass
-test_equal input: 1 expected: 1 received: 1 Result: Pass
-test_equal input: 2 expected: 2 received: 2 Result: Pass
-test_equal input: 3 expected: 3 received: 3 Result: Pass
-test_equal input: 4 expected: 4 received: 4 Result: Pass
-test_equal input: 6 expected: 6 received: 6 Result: Pass
-test_equal input: 7 expected: 7 received: 7 Result: Pass
-test_equal input: 8 expected: 8 received: 8 Result: Pass
-test_equal input: 9 expected: 9 received: 9 Result: Pass
-test_equal input: 10 expected: 10 received: 10 Result: Pass
-test_equal input: 11 expected: 11 received: 11 Result: Pass
-test_equal input: 13 expected: 13 received: 13 Result: Pass
-test_equal input: 12 expected: 12 received: 12 Result: Pass
-test_equal input: 14 expected: 14 received: 14 Result: Pass
-test_equal input: 15 expected: 15 received: 15 Result: Pass
-test_equal input: 17 expected: 17 received: 17 Result: Pass
-test_equal input: 16 expected: 16 received: 16 Result: Pass
-test_equal input: 18 expected: 18 received: 18 Result: Pass
-test_equal input: 19 expected: 19 received: 19 Result: Pass
-test_equal input: 20 expected: 20 received: 20 Result: Pass
-test_equal input: 22 expected: 22 received: 22 Result: Pass
-test_equal input: 23 expected: 23 received: 23 Result: Pass
-test_equal input: 21 expected: 21 received: 21 Result: Pass
-test_equal input: 24 expected: 24 received: 24 Result: Pass
-test_equal input: 25 expected: 25 received: 25 Result: Pass
-test_equal input: 26 expected: 26 received: 26 Result: Pass
-test_equal input: 27 expected: 27 received: 27 Result: Pass
-test_equal input: 29 expected: 29 received: 29 Result: Pass
-test_equal input: 28 expected: 28 received: 28 Result: Pass
-test_equal input: 30 expected: 30 received: 30 Result: Pass
+test_is - input: 1 expected: 1 received: 1 Result: Pass
+test_is - input: 2 expected: 2 received: 2 Result: Pass
+test_is - input: 3 expected: 3 received: 3 Result: Pass
+test_is - input: 4 expected: 4 received: 4 Result: Pass
+test_is - input: 6 expected: 6 received: 6 Result: Pass
+test_is - input: 7 expected: 7 received: 7 Result: Pass
+test_is - input: 8 expected: 8 received: 8 Result: Pass
+test_is - input: 9 expected: 9 received: 9 Result: Pass
+test_is - input: 10 expected: 10 received: 10 Result: Pass
+test_is - input: 1 expected: 1 received: 1 Result: Pass
+test_is - input: 2 expected: 2 received: 2 Result: Pass
+test_is - input: 4 expected: 4 received: 4 Result: Pass
+test_is - input: 3 expected: 3 received: 3 Result: Pass
+test_is - input: 6 expected: 6 received: 6 Result: Pass
+test_is - input: 8 expected: 8 received: 8 Result: Pass
+test_is - input: 7 expected: 7 received: 7 Result: Pass
+test_is - input: 9 expected: 9 received: 9 Result: Pass
+test_is - input: 10 expected: 10 received: 10 Result: Pass
+test_is - input: 1 expected: 1 received: 1 Result: Pass
+test_is - input: 2 expected: 2 received: 2 Result: Pass
+test_is - input: 3 expected: 3 received: 3 Result: Pass
+test_is - input: 4 expected: 4 received: 4 Result: Pass
+test_is - input: 6 expected: 6 received: 6 Result: Pass
+test_is - input: 7 expected: 7 received: 7 Result: Pass
+test_is - input: 8 expected: 8 received: 8 Result: Pass
+test_is - input: 9 expected: 9 received: 9 Result: Pass
+test_is - input: 10 expected: 10 received: 10 Result: Pass
+test_is - input: <__main__.Carro object at 0x00000228A8246640> expected: <__main__.Carro object at 0x00000228A8246640> received: <__main__.Carro object at 0x00000228A8246640> Result: Pass
+test_is - input: <__main__.Carro object at 0x00000228A8510100> expected: <__main__.Carro object at 0x00000228A8510100> received: <__main__.Carro object at 0x00000228A8510100> Result: Pass
+test_is - input: <__main__.Carro object at 0x00000228A8519190> expected: <__main__.Carro object at 0x00000228A8519190> received: <__main__.Carro object at 0x00000228A8519190> Result: Pass
 
-Passed: 141
+Passed: 30
