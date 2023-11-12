@@ -116,6 +116,7 @@ def test_is_not(cpus, input1, expected):
 
 def test_in(input1, expected):
     # não realiza paralelo
+    # verificar viabilidade
     operator = lambda x, y: x in y
     test = "test_in -"
     run_test4(input1, expected, operator, test)
@@ -123,6 +124,7 @@ def test_in(input1, expected):
 
 def test_not_in(input1, expected):
     # não realiza paralelo
+    # verificar viabilidade
     operator = lambda x, y: x not in y
     test = "test_not_in -"
     run_test4(input1, expected, operator, test)
