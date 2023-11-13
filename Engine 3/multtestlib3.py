@@ -29,10 +29,12 @@ def run_test4(input_item, expected_item, operator, test):
     filepass(line) if operator(input_item, expected_item) else filefail(line)
 
 
-def test_equal(cpus, input1, expected, process_function=None, input2=None):
+def test_equal(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: x == y
-    test = "test_equal -"
+    test = "test_equal - "
 
+    if input2 == "":
+        input2 = None
     if not isinstance(input1, list):
         input1 = [input1]
     if not isinstance(expected, list):
@@ -116,7 +118,7 @@ def test_is_not(cpus, input1, expected):
 
 def test_in(input1, expected):
     # não realiza paralelo
-    # verificar viabilidade
+    # verificar viabilidade no arquivo sugestão
     operator = lambda x, y: x in y
     test = "test_in -"
     run_test4(input1, expected, operator, test)
@@ -173,24 +175,24 @@ def test_less_equal(a, b):
 
 def line1a(test, ff, input, result, expected):
     # line1('test_equal', process_function, input_item, result, expected_item)
-    return (str(test) + ' - ' + str(ff.__name__) + ' - ' + 'input: ' + str(input) + ' - ' + 'expected: ' + str(
+    return (str(test) + str(ff.__name__) + ' - ' + 'input: ' + str(input) + ' - ' + 'expected: ' + str(
         expected) + ' - ' + 'received: ' + str(result) + ' - ' + 'Result: ')
 
 
 def line1b(test, ff, input, input2, result, expected):
     # line1b('test_equal', process_function, input_item, input2[0], result, expected_item)
-    return (str(test) + ' - ' + str(ff.__name__) + ' - ' + 'input1: ' + str(input) + ' - ' + 'input2: ' + str(
+    return (str(test) + str(ff.__name__) + ' - ' + 'input1: ' + str(input) + ' - ' + 'input2: ' + str(
         input2) + ' - ' + 'expected: ' + str(
         expected) + ' - ' + 'received: ' + str(result) + ' - ' + 'Result: ')
 
 
 def line1c(test, input, result, expected):
-    return (str(test) + ' input: ' + str(input) + ' expected: ' + str(
+    return (str(test) + 'input: ' + str(input) + ' expected: ' + str(
         expected) + ' received: ' + str(result) + ' Result: ')
 
 
 def line1d(test, input, expected):
-    return (str(test) + ' input: ' + str(input) + ' reference: ' + str(
+    return (str(test) + 'input: ' + str(input) + ' reference: ' + str(
         expected) + ' Result: ')
 
 

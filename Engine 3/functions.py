@@ -65,4 +65,4 @@ def now():
 
 
 def soma(a, b):
-    return (a + b)
+    return a + b
