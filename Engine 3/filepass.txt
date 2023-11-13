@@ -1,5 +1,4 @@
-test_in - input: 5 reference: {1, 2, 3, 4, 5} Result: Pass
-test_in - input: {1, 2, 3} reference: [1, 2, 3, 4, {1, 2, 3}, 6, 7, 8, 9, 10, 1, 2, 3, 4, {1, 2, 3}, 6, 7, 8, 9, 10, 1, 2, 3, 4, {1, 2, 3}, 6, 7, 8, 9, 10] Result: Pass
-test_in - input: 7 reference: [1, 2, 3, 4, 4, 6, 7, 8, 9, 10, 1, 2, 3, 4, 4, 6, 7, 8, 9, 10, 1, 2, 3, 4, 4, 6, 7, 8, 9, 10] Result: Pass
+test_not_in - input: 5 reference: {1, 2, 3, 4} Result: Pass
+test_not_in - input: 747 reference: [1, 2, 3, 4, 4, 6, 7, 8, 9, 10, 1, 2, 3, 4, 4, 6, 7, 8, 9, 10, 1, 2, 3, 4, 4, 6, 7, 8, 9, 10] Result: Pass
 
-Passed: 3
+Passed: 2

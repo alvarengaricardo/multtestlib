@@ -115,14 +115,17 @@ def test_is_not(cpus, input1, expected):
 
 
 def test_in(input1, expected):
+    # não realiza paralelo
     operator = lambda x, y: x in y
     test = "test_in -"
     run_test4(input1, expected, operator, test)
 
 
-def test_not_in(a, b):
-    line = line1('test_not_in', a, b)
-    filepass(line) if a not in b else filefail(line)
+def test_not_in(input1, expected):
+    # não realiza paralelo
+    operator = lambda x, y: x not in y
+    test = "test_not_in -"
+    run_test4(input1, expected, operator, test)
 
 
 def test_instance(a, b):

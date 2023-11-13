@@ -30,11 +30,11 @@ def main():
     functions.now()
     start_time = time.time()
 
-    mtl3.test_in(5, {1, 2, 3, 4, 5})
-    mtl3.test_in(5, {1, 2, 3, 4})
-    mtl3.test_in({1, 2, 3}, values2)
-    mtl3.test_in(7, values)
-    mtl3.test_in(747, values)
+    mtl3.test_not_in(5, {1, 2, 3, 4, 5})
+    mtl3.test_not_in(5, {1, 2, 3, 4})
+    mtl3.test_not_in({1, 2, 3}, values2)
+    mtl3.test_not_in(7, values)
+    mtl3.test_not_in(747, values)
     '''
     mtl3.test_in(cpus, carro1, carro2)
     mtl3.test_in(cpus, carro1, carro3)
