@@ -37,8 +37,8 @@ def main():
     functions.now()
     start_time = time.time()
     #mtl3.test_equal(4, values, "", values2)
-    # mtl3.test_equal(4, values, values3, values3, functions.soma)
-    mtl3.test_equal(cpus, values, "", values2)
+    mtl3.test_not_equal(4, values, values3, values3, functions.soma)
+    #mtl3.test_not_equal(cpus, values, "", values2)
     end_time = time.time()
     functions.now()
     elapsed_time = end_time - start_time

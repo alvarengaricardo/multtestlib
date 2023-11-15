@@ -58,10 +58,12 @@ def test_equal(cpus, input1, input2, expected, process_function=None):
                 executor.submit(run_test3, input_item, expected_item, input2_item, process_function, operator, test)
 
 
-def test_not_equal(cpus, input1, expected, process_function=None, input2=None):
+def test_not_equal(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: x != y
-    test = "test_not_equal -"
+    test = "test_not_equal - "
 
+    if input2 == "":
+        input2 = None
     if not isinstance(input1, list):
         input1 = [input1]
     if not isinstance(expected, list):
