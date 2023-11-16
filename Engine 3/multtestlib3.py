@@ -90,18 +90,24 @@ def test_not_equal(cpus, input1, input2, expected, process_function=None):
 # def test_is(a, b):
 #    line = line1('teste_is', a, b)
 #    filepass(line) if a is b else filefail(line)
-def test_is(cpus, input1, expected):
+def test_is(cpus, input1, expected, process_function=None):
     operator = lambda x, y: x is y
-    test = "test_is -"
+    test = "test_is - "
 
     if not isinstance(input1, list):
         input1 = [input1]
     if not isinstance(expected, list):
         expected = [expected]
 
-    with ThreadPoolExecutor(max_workers=cpus) as executor:
-        for input_item, expected_item in zip(input1, expected):
-            executor.submit(run_test2, input_item, expected_item, operator, test)
+    if process_function is not None:
+        with ThreadPoolExecutor(max_workers=cpus) as executor:
+            for input_item, expected_item in zip(input1, expected):
+                executor.submit(run_test1, input_item, expected_item, process_function, operator, test)
+
+    if process_function is None:
+        with ThreadPoolExecutor(max_workers=cpus) as executor:
+            for input_item, expected_item in zip(input1, expected):
+                executor.submit(run_test2, input_item, expected_item, operator, test)
 
 
 def test_is_not(cpus, input1, expected):

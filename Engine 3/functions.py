@@ -66,3 +66,11 @@ def now():
 
 def soma(a, b):
     return a + b
+
+
+def maisum(a):
+    return a + 1
+
+
+def dobro(a):
+    return a * 2

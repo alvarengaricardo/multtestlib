@@ -1,32 +1,61 @@
-test_not_equal - soma - input1: 1 - input2: 2 - expected: 2 - received: 3 - Result: Pass
-test_not_equal - soma - input1: 2 - input2: 4 - expected: 4 - received: 6 - Result: Pass
-test_not_equal - soma - input1: 3 - input2: 6 - expected: 6 - received: 9 - Result: Pass
-test_not_equal - soma - input1: 4 - input2: 8 - expected: 8 - received: 12 - Result: Pass
-test_not_equal - soma - input1: 6 - input2: 12 - expected: 12 - received: 18 - Result: Pass
-test_not_equal - soma - input1: 5 - input2: 10 - expected: 10 - received: 15 - Result: Pass
-test_not_equal - soma - input1: 8 - input2: 16 - expected: 16 - received: 24 - Result: Pass
-test_not_equal - soma - input1: 7 - input2: 14 - expected: 14 - received: 21 - Result: Pass
-test_not_equal - soma - input1: 9 - input2: 18 - expected: 18 - received: 27 - Result: Pass
-test_not_equal - soma - input1: 10 - input2: 20 - expected: 20 - received: 30 - Result: Pass
-test_not_equal - soma - input1: 1 - input2: 2 - expected: 2 - received: 3 - Result: Pass
-test_not_equal - soma - input1: 2 - input2: 4 - expected: 4 - received: 6 - Result: Pass
-test_not_equal - soma - input1: 3 - input2: 6 - expected: 6 - received: 9 - Result: Pass
-test_not_equal - soma - input1: 5 - input2: 10 - expected: 10 - received: 15 - Result: Pass
-test_not_equal - soma - input1: 4 - input2: 8 - expected: 8 - received: 12 - Result: Pass
-test_not_equal - soma - input1: 6 - input2: 12 - expected: 12 - received: 18 - Result: Pass
-test_not_equal - soma - input1: 8 - input2: 16 - expected: 16 - received: 24 - Result: Pass
-test_not_equal - soma - input1: 7 - input2: 14 - expected: 14 - received: 21 - Result: Pass
-test_not_equal - soma - input1: 9 - input2: 18 - expected: 18 - received: 27 - Result: Pass
-test_not_equal - soma - input1: 10 - input2: 20 - expected: 20 - received: 30 - Result: Pass
-test_not_equal - soma - input1: 1 - input2: 2 - expected: 2 - received: 3 - Result: Pass
-test_not_equal - soma - input1: 2 - input2: 4 - expected: 4 - received: 6 - Result: Pass
-test_not_equal - soma - input1: 4 - input2: 8 - expected: 8 - received: 12 - Result: Pass
-test_not_equal - soma - input1: 3 - input2: 6 - expected: 6 - received: 9 - Result: Pass
-test_not_equal - soma - input1: 5 - input2: 10 - expected: 10 - received: 15 - Result: Pass
-test_not_equal - soma - input1: 6 - input2: 12 - expected: 12 - received: 18 - Result: Pass
-test_not_equal - soma - input1: 7 - input2: 14 - expected: 14 - received: 21 - Result: Pass
-test_not_equal - soma - input1: 8 - input2: 16 - expected: 16 - received: 24 - Result: Pass
-test_not_equal - soma - input1: 9 - input2: 18 - expected: 18 - received: 27 - Result: Pass
-test_not_equal - soma - input1: 10 - input2: 20 - expected: 20 - received: 30 - Result: Pass
+test_is - dobro - input: 1 - expected: 2 - received: 2 - Result: Pass
+test_is - dobro - input: 2 - expected: 3 - received: 4 - Result: Fail
+test_is - dobro - input: 4 - expected: 5 - received: 8 - Result: Fail
+test_is - dobro - input: 3 - expected: 4 - received: 6 - Result: Fail
+test_is - dobro - input: 5 - expected: 6 - received: 10 - Result: Fail
+test_is - dobro - input: 6 - expected: 7 - received: 12 - Result: Fail
+test_is - dobro - input: 7 - expected: 8 - received: 14 - Result: Fail
+test_is - dobro - input: 9 - expected: 10 - received: 18 - Result: Fail
+test_is - dobro - input: 10 - expected: 11 - received: 20 - Result: Fail
+test_is - dobro - input: 2 - expected: 3 - received: 4 - Result: Fail
+test_is - dobro - input: 1 - expected: 2 - received: 2 - Result: Pass
+test_is - dobro - input: 3 - expected: 4 - received: 6 - Result: Fail
+test_is - dobro - input: 4 - expected: 5 - received: 8 - Result: Fail
+test_is - dobro - input: 5 - expected: 6 - received: 10 - Result: Fail
+test_is - dobro - input: 6 - expected: 7 - received: 12 - Result: Fail
+test_is - dobro - input: 7 - expected: 8 - received: 14 - Result: Fail
+test_is - dobro - input: 8 - expected: 9 - received: 16 - Result: Fail
+test_is - dobro - input: 9 - expected: 10 - received: 18 - Result: Fail
+test_is - dobro - input: 10 - expected: 11 - received: 20 - Result: Fail
+test_is - dobro - input: 1 - expected: 2 - received: 2 - Result: Pass
+test_is - dobro - input: 2 - expected: 3 - received: 4 - Result: Fail
+test_is - dobro - input: 3 - expected: 4 - received: 6 - Result: Fail
+test_is - dobro - input: 6 - expected: 7 - received: 12 - Result: Fail
+test_is - dobro - input: 5 - expected: 6 - received: 10 - Result: Fail
+test_is - dobro - input: 4 - expected: 5 - received: 8 - Result: Fail
+test_is - dobro - input: 7 - expected: 8 - received: 14 - Result: Fail
+test_is - dobro - input: 8 - expected: 9 - received: 16 - Result: Fail
+test_is - dobro - input: 9 - expected: 10 - received: 18 - Result: Fail
+test_is - dobro - input: 10 - expected: 11 - received: 20 - Result: Fail
+test_is - input: 1 expected: 2 received: 1 Result: Fail
+test_is - input: 2 expected: 3 received: 2 Result: Fail
+test_is - input: 3 expected: 4 received: 3 Result: Fail
+test_is - input: 4 expected: 5 received: 4 Result: Fail
+test_is - input: 5 expected: 6 received: 5 Result: Fail
+test_is - input: 6 expected: 7 received: 6 Result: Fail
+test_is - input: 7 expected: 8 received: 7 Result: Fail
+test_is - input: 8 expected: 9 received: 8 Result: Fail
+test_is - input: 9 expected: 10 received: 9 Result: Fail
+test_is - input: 10 expected: 11 received: 10 Result: Fail
+test_is - input: 1 expected: 2 received: 1 Result: Fail
+test_is - input: 4 expected: 5 received: 4 Result: Fail
+test_is - input: 2 expected: 3 received: 2 Result: Fail
+test_is - input: 3 expected: 4 received: 3 Result: Fail
+test_is - input: 5 expected: 6 received: 5 Result: Fail
+test_is - input: 7 expected: 8 received: 7 Result: Fail
+test_is - input: 6 expected: 7 received: 6 Result: Fail
+test_is - input: 8 expected: 9 received: 8 Result: Fail
+test_is - input: 9 expected: 10 received: 9 Result: Fail
+test_is - input: 1 expected: 2 received: 1 Result: Fail
+test_is - input: 10 expected: 11 received: 10 Result: Fail
+test_is - input: 2 expected: 3 received: 2 Result: Fail
+test_is - input: 4 expected: 5 received: 4 Result: Fail
+test_is - input: 3 expected: 4 received: 3 Result: Fail
+test_is - input: 5 expected: 6 received: 5 Result: Fail
+test_is - input: 6 expected: 7 received: 6 Result: Fail
+test_is - input: 7 expected: 8 received: 7 Result: Fail
+test_is - input: 8 expected: 9 received: 8 Result: Fail
 
-Total: 30
+test_is - input: 10 expected: 11 received: 10 Result: Fail
+
+Total: 59
