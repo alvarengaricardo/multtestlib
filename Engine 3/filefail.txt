@@ -1,0 +1,5 @@
+test_is_not - dobro - input: 1 - expected: 2 - received: 2 - Result: Fail
+test_is_not - dobro - input: 1 - expected: 2 - received: 2 - Result: Fail
+test_is_not - dobro - input: 1 - expected: 2 - received: 2 - Result: Fail
+
+Failed: 3
