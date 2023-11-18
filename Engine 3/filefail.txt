@@ -1,5 +1,3 @@
-test_is_not - dobro - input: 1 - expected: 2 - received: 2 - Result: Fail
-test_is_not - dobro - input: 1 - expected: 2 - received: 2 - Result: Fail
-test_is_not - dobro - input: 1 - expected: 2 - received: 2 - Result: Fail
+test_is - input: [1, 2, 3] expected: [1, 2, 3] received: [1, 2, 3] Result: Fail
 
-Failed: 3
+Failed: 1
