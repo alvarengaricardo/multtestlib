@@ -21,10 +21,11 @@ def fibonacci(n):
 
 def slow_function(n):
     # cenário 1: n/100
-    time.sleep(n / 100)
-    # cenário 2: 1/10
-    # time.sleep(1 / 10)
-    return n
+    # time.sleep(n / 100)
+    #cenário 2: 1/10
+    time.sleep(1 / 10)
+
+    return (n)
 
 
 def factorial_rec(n):

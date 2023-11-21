@@ -29,34 +29,45 @@ def run_test4(input_item, expected_item, operator, test):
     filepass(line) if operator(input_item, expected_item) else filefail(line)
 
 
-def test_equal(cpus, input1, input2, expected, process_function=None):
-    # a == b compares the content of the variables, checking if the values are equal.
-    operator = lambda x, y: x == y
-    test = "test_equal - "
-
-    if input2 == "":
-        input2 = None
+def handle(cpus, input1, input2, expected, operator, test, process_function=None):
     if not isinstance(input1, list):
         input1 = [input1]
     if not isinstance(expected, list):
         expected = [expected]
 
     if (input2 is None) and (process_function is not None):
+        #print("motor 1")
         with ThreadPoolExecutor(max_workers=cpus) as executor:
             for input_item, expected_item in zip(input1, expected):
                 executor.submit(run_test1, input_item, expected_item, process_function, operator, test)
 
     if (input2 is None) and (process_function is None):
+        #print("motor 2")
+        #print(
+        #    f"cpus: {cpus} - input1: {input1} - input2: {input2} - expected: {expected} - function: {process_function} - operator: {operator} - test: {test}")
+        #print("*****")
         with ThreadPoolExecutor(max_workers=cpus) as executor:
             for input_item, expected_item in zip(input1, expected):
                 executor.submit(run_test2, input_item, expected_item, operator, test)
 
     if (input2 is not None) and (process_function is not None):
+        #print("motor 3")
         if not isinstance(input2, list):
             input2 = [input2]
         with ThreadPoolExecutor(max_workers=cpus) as executor:
             for input_item, expected_item, input2_item in zip(input1, expected, input2):
                 executor.submit(run_test3, input_item, expected_item, input2_item, process_function, operator, test)
+
+
+def test_equal(cpus: object, input1: object, input2: object, expected: object, process_function: object = None) -> object:
+    # a == b compares the content of the variables, checking if the values are equal.
+    operator = lambda x, y: x == y
+    test = "test_equal - "
+    if input2 == "":
+        input2 = None
+    print(f"cpus: {cpus} - input1: {input1} - input2: {input2} - expected: {expected} - function: {process_function} - operator: {operator} - test: {test}")
+    handle(cpus, input1, input2, expected, operator, test, process_function)
+
 
 
 def test_not_equal(cpus, input1, input2, expected, process_function=None):
@@ -65,22 +76,29 @@ def test_not_equal(cpus, input1, input2, expected, process_function=None):
 
     if input2 == "":
         input2 = None
+
+    print(
+        f"cpus: {cpus} - input1: {input1} - input2: {input2} - expected: {expected} - function: {process_function} - operator: {operator} - test: {test}")
+
     if not isinstance(input1, list):
         input1 = [input1]
     if not isinstance(expected, list):
         expected = [expected]
 
     if (input2 is None) and (process_function is not None):
+        print("motor 1")
         with ThreadPoolExecutor(max_workers=cpus) as executor:
             for input_item, expected_item in zip(input1, expected):
                 executor.submit(run_test1, input_item, expected_item, process_function, operator, test)
 
     if (input2 is None) and (process_function is None):
+        print("motor 2")
         with ThreadPoolExecutor(max_workers=cpus) as executor:
             for input_item, expected_item in zip(input1, expected):
                 executor.submit(run_test2, input_item, expected_item, operator, test)
 
     if (input2 is not None) and (process_function is not None):
+        print("motor 3")
         if not isinstance(input2, list):
             input2 = [input2]
         with ThreadPoolExecutor(max_workers=cpus) as executor:
@@ -147,6 +165,9 @@ def test_is_not(cpus, input1, input2, expected, process_function=None):
         with ThreadPoolExecutor(max_workers=cpus) as executor:
             for input_item, expected_item, input2_item in zip(input1, expected, input2):
                 executor.submit(run_test3, input_item, expected_item, input2_item, process_function, operator, test)
+
+
+############################ Parei aqui
 
 #def test_is_none():
 
