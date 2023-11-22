@@ -22,8 +22,8 @@ def main():
     values3 = []
     a = [1, 2, 3]
     b = a
-    for i in range(0, 20):
-        for x in range(1, 101):
+    for i in range(0, 1):
+        for x in range(1, 51):
 
             if x == 5:
                 values.append(x)
@@ -45,7 +45,7 @@ def main():
     # mtl3.test_is(1, 3, "3")
     # mtl3.test_is(1, carro1, carro1)
     # mtl3.test_is(1, carro1, carro2)
-    mtl3.test_equal(4, values, "", values2, functions.slow_function)
+    mtl3.test_not_equal(4, values, "", values2, functions.slow_function)
     #mtl3.test_not_equal(4, values, "", values2, functions.slow_function)
     # mtl3.test_is_not(4, values, values2, functions.dobro)
     # mtl3.test_is_not(4, values, values2)
