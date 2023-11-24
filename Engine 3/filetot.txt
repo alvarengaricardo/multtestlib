@@ -1,50 +1,6 @@
-test_not_equal - slow_function - input: 4 - expected: 4 - received: 4 - Result: Fail
-test_not_equal - slow_function - input: 1 - expected: 1 - received: 1 - Result: Fail
-test_not_equal - slow_function - input: 2 - expected: 2 - received: 2 - Result: Fail
-test_not_equal - slow_function - input: 8 - expected: 8 - received: 8 - Result: Fail
-test_not_equal - slow_function - input: 7 - expected: 7 - received: 7 - Result: Fail
-test_not_equal - slow_function - input: 5 - expected: 7 - received: 5 - Result: Pass
-test_not_equal - slow_function - input: 6 - expected: 6 - received: 6 - Result: Fail
-test_not_equal - slow_function - input: 9 - expected: 9 - received: 9 - Result: Fail
-l
-test_not_equal - slow_function - input: 11 - expected: 11 - received: 11 - Result: Fail
-test_not_equal - slow_function - input: 16 - expected: 16 - received: 16 - Result: Fail
-test_not_equal - slow_function - input: 13 - expected: 13 - received: 13 - Result: Fail
-test_not_equal - slow_function - input: 14 - expected: 14 - received: 14 - Result: Fail
-test_not_equal - slow_function - input: 15 - expected: 15 - received: 15 - Result: Fail
-test_not_equal - slow_function - input: 17 - expected: 17 - received: 17 - Result: Fail
-test_not_equal - slow_function - input: 18 - expected: 18 - received: 18 - Result: Fail
-test_not_equal - slow_function - input: 19 - expected: 19 - received: 19 - Result: Fail
-test_not_equal - slow_function - input: 20 - expected: 20 - received: 20 - Result: Fail
-test_not_equal - slow_function - input: 23 - expected: 23 - received: 23 - Result: Fail
-test_not_equal - slow_function - input: 22 - expected: 22 - received: 22 - Result: Fail
-test_not_equal - slow_function - input: 21 - expected: 21 - received: 21 - Result: Fail
-test_not_equal - slow_function - input: 24 - expected: 24 - received: 24 - Result: Fail
-test_not_equal - slow_function - input: 27 - expected: 27 - received: 27 - Result: Fail
-test_not_equal - slow_function - input: 25 - expected: 25 - received: 25 - Result: Fail
-test_not_equal - slow_function - input: 26 - expected: 26 - received: 26 - Result: Fail
-test_not_equal - slow_function - input: 28 - expected: 28 - received: 28 - Result: Fail
-test_not_equal - slow_function - input: 31 - expected: 31 - received: 31 - Result: Fail
-test_not_equal - slow_function - input: 30 - expected: 30 - received: 30 - Result: Fail
-test_not_equal - slow_function - input: 29 - expected: 29 - received: 29 - Result: Fail
-test_not_equal - slow_function - input: 32 - expected: 32 - received: 32 - Result: Fail
-test_not_equal - slow_function - input: 35 - expected: 35 - received: 35 - Result: Fail
-test_not_equal - slow_function - input: 33 - expected: 33 - received: 33 - Result: Fail
-test_not_equal - slow_function - input: 34 - expected: 34 - received: 34 - Result: Fail
-test_not_equal - slow_function - input: 36 - expected: 36 - received: 36 - Result: Fail
-test_not_equal - slow_function - input: 37 - expected: 37 - received: 37 - Result: Fail
-test_not_equal - slow_function - input: 39 - expected: 39 - received: 39 - Result: Fail
-test_not_equal - slow_function - input: 40 - expected: 40 - received: 40 - Result: Fail
-test_not_equal - slow_function - input: 38 - expected: 38 - received: 38 - Result: Fail
-test_not_equal - slow_function - input: 44 - expected: 44 - received: 44 - Result: Fail
-test_not_equal - slow_function - input: 41 - expected: 41 - received: 41 - Result: Fail
-test_not_equal - slow_function - input: 43 - expected: 43 - received: 43 - Result: Fail
-test_not_equal - slow_function - input: 42 - expected: 42 - received: 42 - Result: Fail
-test_not_equal - slow_function - input: 46 - expected: 46 - received: 46 - Result: Fail
-test_not_equal - slow_function - input: 47 - expected: 47 - received: 47 - Result: Fail
-test_not_equal - slow_function - input: 45 - expected: 45 - received: 45 - Result: Fail
-test_not_equal - slow_function - input: 48 - expected: 48 - received: 48 - Result: Fail
-test_not_equal - slow_function - input: 50 - expected: 50 - received: 50 - Result: Fail
-test_not_equal - slow_function - input: 49 - expected: 49 - received: 49 - Result: Fail
+test_is - input: 3 expected: 4 received: 3 Result: Fail
+test_is - input: 3 expected: 3 received: 3 Result: Fail
+test_is - input: <__main__.Carro object at 0x000002297A4986D0> expected: <__main__.Carro object at 0x000002297A4986D0> received: <__main__.Carro object at 0x000002297A4986D0> Result: Pass
+test_is - input: <__main__.Carro object at 0x000002297A4986D0> expected: <__main__.Carro object at 0x000002297A479190> received: <__main__.Carro object at 0x000002297A4986D0> Result: Fail
 
-Total: 48
+Total: 4

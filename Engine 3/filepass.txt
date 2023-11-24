@@ -1,3 +1,3 @@
-test_not_equal - slow_function - input: 5 - expected: 7 - received: 5 - Result: Pass
+test_is - input: <__main__.Carro object at 0x000002297A4986D0> expected: <__main__.Carro object at 0x000002297A4986D0> received: <__main__.Carro object at 0x000002297A4986D0> Result: Pass
 
 Passed: 1
