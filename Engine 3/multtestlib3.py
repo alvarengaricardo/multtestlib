@@ -23,6 +23,12 @@ def run_test3(input_item, expected_item, input2_item, process_function, operator
     filepass(line) if operator(result, expected_item) else filefail(line)
 
 
+# (test, input, expected)
+def run_test4(input_item, expected_item, operator, test):
+    line = line1d(test, input_item, expected_item)
+    filepass(line) if operator(input_item, expected_item) else filefail(line)
+
+
 def test_equal(cpus, input1, expected, process_function=None, input2=None):
     operator = lambda x, y: x == y
     test = "test_equal -"
@@ -108,9 +114,10 @@ def test_is_not(cpus, input1, expected):
             executor.submit(run_test2, input_item, expected_item, operator, test)
 
 
-def test_in(a, b):
-    line = line1('test_in', a, b)
-    filepass(line) if a in b else filefail(line)
+def test_in(input1, expected):
+    operator = lambda x, y: x in y
+    test = "test_in -"
+    run_test4(input1, expected, operator, test)
 
 
 def test_not_in(a, b):
@@ -175,6 +182,11 @@ def line1b(test, ff, input, input2, result, expected):
 def line1c(test, input, result, expected):
     return (str(test) + ' input: ' + str(input) + ' expected: ' + str(
         expected) + ' received: ' + str(result) + ' Result: ')
+
+
+def line1d(test, input, expected):
+    return (str(test) + ' input: ' + str(input) + ' reference: ' + str(
+        expected) + ' Result: ')
 
 
 '''

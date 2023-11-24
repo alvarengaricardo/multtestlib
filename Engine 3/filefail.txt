@@ -1,8 +1,4 @@
-test_is - input: 4 expected: 6 received: 4 Result: Fail
-test_is - input: 4 expected: 6 received: 4 Result: Fail
-test_is - input: 4 expected: 6 received: 4 Result: Fail
-test_is - input: <__main__.Carro object at 0x00000228A8246640> expected: <__main__.Carro object at 0x00000228A8510100> received: <__main__.Carro object at 0x00000228A8246640> Result: Fail
-test_is - input: <__main__.Carro object at 0x00000228A8246640> expected: <__main__.Carro object at 0x00000228A8519190> received: <__main__.Carro object at 0x00000228A8246640> Result: Fail
-test_is - input: <__main__.Carro object at 0x00000228A8510100> expected: <__main__.Carro object at 0x00000228A8519190> received: <__main__.Carro object at 0x00000228A8510100> Result: Fail
+test_in - input: 5 reference: {1, 2, 3, 4} Result: Fail
+test_in - input: 747 reference: [1, 2, 3, 4, 4, 6, 7, 8, 9, 10, 1, 2, 3, 4, 4, 6, 7, 8, 9, 10, 1, 2, 3, 4, 4, 6, 7, 8, 9, 10] Result: Fail
 
-Failed: 6
+Failed: 2

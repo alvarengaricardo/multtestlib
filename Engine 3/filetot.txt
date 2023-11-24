@@ -1,38 +1,7 @@
-test_is - input: 1 expected: 1 received: 1 Result: Pass
-test_is - input: 2 expected: 2 received: 2 Result: Pass
-test_is - input: 3 expected: 3 received: 3 Result: Pass
-test_is - input: 4 expected: 4 received: 4 Result: Pass
-test_is - input: 4 expected: 6 received: 4 Result: Fail
-test_is - input: 6 expected: 6 received: 6 Result: Pass
-test_is - input: 7 expected: 7 received: 7 Result: Pass
-test_is - input: 8 expected: 8 received: 8 Result: Pass
-test_is - input: 9 expected: 9 received: 9 Result: Pass
-test_is - input: 1 expected: 1 received: 1 Result: Pass
-test_is - input: 10 expected: 10 received: 10 Result: Pass
-test_is - input: 2 expected: 2 received: 2 Result: Pass
-test_is - input: 3 expected: 3 received: 3 Result: Pass
-test_is - input: 4 expected: 4 received: 4 Result: Pass
-test_is - input: 4 expected: 6 received: 4 Result: Fail
-test_is - input: 6 expected: 6 received: 6 Result: Pass
-test_is - input: 8 expected: 8 received: 8 Result: Pass
-test_is - input: 7 expected: 7 received: 7 Result: Pass
-test_is - input: 9 expected: 9 received: 9 Result: Pass
-test_is - input: 10 expected: 10 received: 10 Result: Pass
-test_is - input: 1 expected: 1 received: 1 Result: Pass
-test_is - input: 2 expected: 2 received: 2 Result: Pass
-test_is - input: 3 expected: 3 received: 3 Result: Pass
-test_is - input: 4 expected: 4 received: 4 Result: Pass
-test_is - input: 4 expected: 6 received: 4 Result: Fail
-test_is - input: 6 expected: 6 received: 6 Result: Pass
-test_is - input: 7 expected: 7 received: 7 Result: Pass
-test_is - input: 8 expected: 8 received: 8 Result: Pass
-test_is - input: 9 expected: 9 received: 9 Result: Pass
-test_is - input: 10 expected: 10 received: 10 Result: Pass
-test_is - input: <__main__.Carro object at 0x00000228A8246640> expected: <__main__.Carro object at 0x00000228A8246640> received: <__main__.Carro object at 0x00000228A8246640> Result: Pass
-test_is - input: <__main__.Carro object at 0x00000228A8246640> expected: <__main__.Carro object at 0x00000228A8510100> received: <__main__.Carro object at 0x00000228A8246640> Result: Fail
-test_is - input: <__main__.Carro object at 0x00000228A8246640> expected: <__main__.Carro object at 0x00000228A8519190> received: <__main__.Carro object at 0x00000228A8246640> Result: Fail
-test_is - input: <__main__.Carro object at 0x00000228A8510100> expected: <__main__.Carro object at 0x00000228A8510100> received: <__main__.Carro object at 0x00000228A8510100> Result: Pass
-test_is - input: <__main__.Carro object at 0x00000228A8510100> expected: <__main__.Carro object at 0x00000228A8519190> received: <__main__.Carro object at 0x00000228A8510100> Result: Fail
-test_is - input: <__main__.Carro object at 0x00000228A8519190> expected: <__main__.Carro object at 0x00000228A8519190> received: <__main__.Carro object at 0x00000228A8519190> Result: Pass
+test_in - input: 5 reference: {1, 2, 3, 4, 5} Result: Pass
+test_in - input: 5 reference: {1, 2, 3, 4} Result: Fail
+test_in - input: {1, 2, 3} reference: [1, 2, 3, 4, {1, 2, 3}, 6, 7, 8, 9, 10, 1, 2, 3, 4, {1, 2, 3}, 6, 7, 8, 9, 10, 1, 2, 3, 4, {1, 2, 3}, 6, 7, 8, 9, 10] Result: Pass
+test_in - input: 7 reference: [1, 2, 3, 4, 4, 6, 7, 8, 9, 10, 1, 2, 3, 4, 4, 6, 7, 8, 9, 10, 1, 2, 3, 4, 4, 6, 7, 8, 9, 10] Result: Pass
+test_in - input: 747 reference: [1, 2, 3, 4, 4, 6, 7, 8, 9, 10, 1, 2, 3, 4, 4, 6, 7, 8, 9, 10, 1, 2, 3, 4, 4, 6, 7, 8, 9, 10] Result: Fail
 
-Total: 36
+Total: 5
