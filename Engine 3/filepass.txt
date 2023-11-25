@@ -1,3 +1,52 @@
-test_is - input: <__main__.Carro object at 0x000002297A4986D0> expected: <__main__.Carro object at 0x000002297A4986D0> received: <__main__.Carro object at 0x000002297A4986D0> Result: Pass
+test_is - input: <__main__.Carro object at 0x0000023C9BDC6640> expected: <__main__.Carro object at 0x0000023C9BDC6640> received: <__main__.Carro object at 0x0000023C9BDC6640> Result: Pass
+test_is_not - dobro - input: 1 - expected: 1 - received: 2 - Result: Pass
+test_is_not - dobro - input: 2 - expected: 2 - received: 4 - Result: Pass
+test_is_not - dobro - input: 3 - expected: 3 - received: 6 - Result: Pass
+test_is_not - dobro - input: 6 - expected: 6 - received: 12 - Result: Pass
+test_is_not - dobro - input: 4 - expected: 4 - received: 8 - Result: Pass
+test_is_not - dobro - input: 7 - expected: 7 - received: 14 - Result: Pass
+test_is_not - dobro - input: 8 - expected: 8 - received: 16 - Result: Pass
+test_is_not - dobro - input: 9 - expected: 9 - received: 18 - Result: Pass
+test_is_not - dobro - input: 10 - expected: 10 - received: 20 - Result: Pass
+test_is_not - dobro - input: 11 - expected: 11 - received: 22 - Result: Pass
+test_is_not - dobro - input: 12 - expected: 12 - received: 24 - Result: Pass
+test_is_not - dobro - input: 13 - expected: 13 - received: 26 - Result: Pass
+test_is_not - dobro - input: 14 - expected: 14 - received: 28 - Result: Pass
+test_is_not - dobro - input: 16 - expected: 16 - received: 32 - Result: Pass
+test_is_not - dobro - input: 15 - expected: 15 - received: 30 - Result: Pass
+test_is_not - dobro - input: 17 - expected: 17 - received: 34 - Result: Pass
+test_is_not - dobro - input: 18 - expected: 18 - received: 36 - Result: Pass
+test_is_not - dobro - input: 19 - expected: 19 - received: 38 - Result: Pass
+test_is_not - dobro - input: 20 - expected: 20 - received: 40 - Result: Pass
+test_is_not - dobro - input: 21 - expected: 21 - received: 42 - Result: Pass
+test_is_not - dobro - input: 24 - expected: 24 - received: 48 - Result: Pass
+test_is_not - dobro - input: 22 - expected: 22 - received: 44 - Result: Pass
+test_is_not - dobro - input: 25 - expected: 25 - received: 50 - Result: Pass
+test_is_not - dobro - input: 23 - expected: 23 - received: 46 - Result: Pass
+test_is_not - dobro - input: 26 - expected: 26 - received: 52 - Result: Pass
+test_is_not - dobro - input: 28 - expected: 28 - received: 56 - Result: Pass
+test_is_not - dobro - input: 27 - expected: 27 - received: 54 - Result: Pass
+test_is_not - dobro - input: 30 - expected: 30 - received: 60 - Result: Pass
+test_is_not - dobro - input: 31 - expected: 31 - received: 62 - Result: Pass
+test_is_not - dobro - input: 29 - expected: 29 - received: 58 - Result: Pass
+test_is_not - dobro - input: 32 - expected: 32 - received: 64 - Result: Pass
+test_is_not - dobro - input: 34 - expected: 34 - received: 68 - Result: Pass
+test_is_not - dobro - input: 33 - expected: 33 - received: 66 - Result: Pass
+test_is_not - dobro - input: 35 - expected: 35 - received: 70 - Result: Pass
+test_is_not - dobro - input: 36 - expected: 36 - received: 72 - Result: Pass
+test_is_not - dobro - input: 38 - expected: 38 - received: 76 - Result: Pass
+test_is_not - dobro - input: 37 - expected: 37 - received: 74 - Result: Pass
+test_is_not - dobro - input: 40 - expected: 40 - received: 80 - Result: Pass
+test_is_not - dobro - input: 41 - expected: 41 - received: 82 - Result: Pass
+test_is_not - dobro - input: 44 - expected: 44 - received: 88 - Result: Pass
+test_is_not - dobro - input: 43 - expected: 43 - received: 86 - Result: Pass
+test_is_not - dobro - input: 42 - expected: 42 - received: 84 - Result: Pass
+test_is_not - dobro - input: 45 - expected: 45 - received: 90 - Result: Pass
+test_is_not - dobro - input: 47 - expected: 47 - received: 94 - Result: Pass
+test_is_not - dobro - input: 46 - expected: 46 - received: 92 - Result: Pass
+test_is_not - dobro - input: 48 - expected: 48 - received: 96 - Result: Pass
+test_is_not - dobro - input: 49 - expected: 49 - received: 98 - Result: Pass
+test_is_not - dobro - input: 50 - expected: 50 - received: 100 - Result: Pass
+test_is_not - input: 5 expected: 10 received: 5 Result: Pass
 
-Passed: 1
+Passed: 50

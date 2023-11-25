@@ -27,7 +27,7 @@ def main():
 
             if x == 5:
                 values.append(x)
-                values2.append(x+2)
+                values2.append(10)
                 #values2.append([1, 2, 3])
             else:
                 values.append(x)
@@ -47,9 +47,9 @@ def main():
     mtl3.test_is(1, carro1, "", carro2)
     #mtl3.test_not_equal(4, values, "", values2, functions.slow_function)
     #mtl3.test_not_equal(4, values, "", values2, functions.slow_function)
-    # mtl3.test_is_not(4, values, values2, functions.dobro)
-    # mtl3.test_is_not(4, values, values2)
-    # mtl3.test_not_equal(cpus, values, "", values2)
+    mtl3.test_is_not(4, values, "", values2, functions.dobro)
+    mtl3.test_is_not(4, values, "", values2)
+    #mtl3.test_not_equal(cpus, values, "", values2)
     end_time = time.time()
     functions.now()
     elapsed_time = end_time - start_time

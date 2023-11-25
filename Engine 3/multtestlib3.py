@@ -61,11 +61,10 @@ def dispatcher(cpus, input1, input2, expected, operator, test, process_function=
                 executor.submit(engine3, input_item, expected_item, input2_item, process_function, operator, test)
 
 
-def test_equal(cpus, input1, input2, expected, process_function = None):
+def test_equal(cpus, input1, input2, expected, process_function=None):
     # a == b compares the content of the variables, checking if the values are equal.
     operator = lambda x, y: x == y
     test = "test_equal - "
-
     # print(f"cpus: {cpus} - input1: {input1} - input2: {input2} - expected: {expected} - function: {process_function} - operator: {operator} - test: {test}")
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
@@ -86,34 +85,10 @@ def test_is(cpus, input1, input2, expected, process_function=None):
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
-
 def test_is_not(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: x is not y
     test = "test_is_not - "
-
-    if input2 == "":
-        input2 = None
-    if not isinstance(input1, list):
-        input1 = [input1]
-    if not isinstance(expected, list):
-        expected = [expected]
-
-    if (input2 is None) and (process_function is not None):
-        with ThreadPoolExecutor(max_workers=cpus) as executor:
-            for input_item, expected_item in zip(input1, expected):
-                executor.submit(run_test1, input_item, expected_item, process_function, operator, test)
-
-    if (input2 is None) and (process_function is None):
-        with ThreadPoolExecutor(max_workers=cpus) as executor:
-            for input_item, expected_item in zip(input1, expected):
-                executor.submit(run_test2, input_item, expected_item, operator, test)
-
-    if (input2 is not None) and (process_function is not None):
-        if not isinstance(input2, list):
-            input2 = [input2]
-        with ThreadPoolExecutor(max_workers=cpus) as executor:
-            for input_item, expected_item, input2_item in zip(input1, expected, input2):
-                executor.submit(run_test3, input_item, expected_item, input2_item, process_function, operator, test)
+    dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 ############################ Parei aqui
