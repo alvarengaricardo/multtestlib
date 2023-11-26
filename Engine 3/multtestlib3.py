@@ -3,6 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 
 def engine1(input_item, expected_item, process_function, operator, test):
+    #print("motor1")
     result = process_function(input_item)
     line = line1a(test, process_function, input_item, result, expected_item)
     # filepass(line) if result == expected_item else filefail(line)
@@ -10,6 +11,7 @@ def engine1(input_item, expected_item, process_function, operator, test):
 
 
 def engine2(input_item, expected_item, operator, test):
+    #print("motor2")
     result = input_item
     line = line1c(test, input_item, result, expected_item)
     # filepass(line) if result == expected_item else filefail(line)
@@ -17,6 +19,7 @@ def engine2(input_item, expected_item, operator, test):
 
 
 def engine3(input_item, expected_item, input2_item, process_function, operator, test):
+    #print("motor3")
     result = process_function(input_item, input2_item)
     line = line1b(test, process_function, input_item, input2_item, result, expected_item)
     # filepass(line) if result == expected_item else filefail(line)
@@ -91,21 +94,18 @@ def test_is_not(cpus, input1, input2, expected, process_function=None):
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
-############################ Parei aqui
-
 # def test_is_none():
 
-def test_in(input1, expected):
-    # não realiza paralelo
-    # verificar viabilidade no arquivo sugestão
+def test_in(cpus, input1, input2, expected, process_function=None):
+    # verifica se input1 existe em alguma posição em input2
     operator = lambda x, y: x in y
     test = "test_in -"
-    run_test4(input1, expected, operator, test)
+    #run_test4(input1, expected, operator, test)
+    dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_not_in(input1, expected):
-    # não realiza paralelo
-    # verificar viabilidade
+    # verifica se input1 NÃO existe em alguma posição em input2
     operator = lambda x, y: x not in y
     test = "test_not_in -"
     run_test4(input1, expected, operator, test)

@@ -23,15 +23,15 @@ def main():
     a = [1, 2, 3]
     b = a
     for i in range(0, 1):
-        for x in range(1, 51):
+        for x in range(1, 21):
 
             if x == 5:
-                values.append(x)
-                values2.append(10)
-                #values2.append([1, 2, 3])
+                values.append([1, 2, 3])
+                #values2.append(10)
+                values2.append([1, 2, 2, 3, 5])
             else:
                 values.append(x)
-                values2.append(x)
+                values2.append([x-3, x, x-2, x+2, x+1])
 
             #values.append(x)
             #values2.append(x)
@@ -39,16 +39,17 @@ def main():
 
     functions.now()
     start_time = time.time()
+    mtl3.test_in(4, values, "", values2, functions.slow_function)
     #mtl3.test_is(1, values, values2)
     #mtl3.test_equal(1, values, "", values2)
-    mtl3.test_is(1, 3, "", 4)
-    mtl3.test_is(1, 3, "", "3")
-    mtl3.test_is(1, carro1, "", carro1)
-    mtl3.test_is(1, carro1, "", carro2)
+    #mtl3.test_is(1, 3, "", 4)
+    #mtl3.test_is(1, 3, "", "3")
+    #mtl3.test_is(1, carro1, "", carro1)
+    #mtl3.test_is(1, carro1, "", carro2)
     #mtl3.test_not_equal(4, values, "", values2, functions.slow_function)
     #mtl3.test_not_equal(4, values, "", values2, functions.slow_function)
-    mtl3.test_is_not(4, values, "", values2, functions.dobro)
-    mtl3.test_is_not(4, values, "", values2)
+    #mtl3.test_is_not(4, values, "", values2, functions.dobro)
+    #mtl3.test_is_not(4, values, "", values2)
     #mtl3.test_not_equal(cpus, values, "", values2)
     end_time = time.time()
     functions.now()
@@ -75,3 +76,4 @@ if __name__ == "__main__":
     mtl3.test_in(cpus, carro2, carro3)
     mtl3.test_in(cpus, carro3, carro3)
 '''
+
