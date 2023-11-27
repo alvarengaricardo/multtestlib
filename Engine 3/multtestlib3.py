@@ -99,16 +99,16 @@ def test_is_not(cpus, input1, input2, expected, process_function=None):
 def test_in(cpus, input1, input2, expected, process_function=None):
     # verifica se input1 existe em alguma posição em input2
     operator = lambda x, y: x in y
-    test = "test_in -"
+    test = "test_in - "
     #run_test4(input1, expected, operator, test)
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
-def test_not_in(input1, expected):
+def test_not_in(cpus, input1, input2, expected, process_function=None):
     # verifica se input1 NÃO existe em alguma posição em input2
     operator = lambda x, y: x not in y
-    test = "test_not_in -"
-    run_test4(input1, expected, operator, test)
+    test = "test_not_in - "
+    dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_instance(a, b):

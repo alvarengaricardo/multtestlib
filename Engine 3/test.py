@@ -39,7 +39,7 @@ def main():
 
     functions.now()
     start_time = time.time()
-    mtl3.test_in(4, values, "", values2, functions.slow_function)
+    mtl3.test_not_in(4, values, "", values2, functions.slow_function)
     #mtl3.test_is(1, values, values2)
     #mtl3.test_equal(1, values, "", values2)
     #mtl3.test_is(1, 3, "", 4)
