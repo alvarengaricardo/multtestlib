@@ -11,20 +11,22 @@ def main():
     # Criar a lista "values" usando um loop "for"
     values: List[int] = []
     values2 = []
-    values3 = []
+    expected = []
     a = [1, 2, 3]
     b = [4, 5, 6]
     c = [1, 2]
-    fator = 50
+    fator = 10
     for i in range(0, 1):
         for x in range(1, 51):
             values.append(x)
-            values2.append(x + fator)
+            values2.append(x)
+            expected.append(x + x + fator)
             fator -= 2
 
     functions.now()
     start_time = time.time()
-    mtl3.test_greater(1, values, "", values2)
+    mtl3.test_less(1, values,values2, expected, functions.soma)
+    #mtl3.test_less(1, values, "", values2)
     end_time = time.time()
     functions.now()
     elapsed_time = end_time - start_time

@@ -153,14 +153,20 @@ def test_greater(cpus, input1, input2, expected, process_function=None):
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
-def test_greater_equal(a, b):
-    line = line1('test_greater_equal', a, b)
-    filepass(line) if a >= b else filefail(line)
+def test_greater_equal(cpus, input1, input2, expected, process_function=None):
+    # Verifica se a >= b
+    operator = lambda x, y: x >= y
+    test = "test_greater_equal - "
+    dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
-def test_less(a, b):
-    line = line1('test_less', a, b)
-    filepass(line) if a < b else filefail(line)
+def test_less(cpus, input1, input2, expected, process_function=None):
+    # Verifica se a < b
+    operator = lambda x, y: x < y
+    test = "test_less - "
+    dispatcher(cpus, input1, input2, expected, operator, test, process_function)
+
+
 
 
 def test_less_equal(a, b):

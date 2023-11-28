@@ -1,26 +1,7 @@
-test_greater - input: 27 received: 25 - Result: Pass
-test_greater - input: 28 received: 24 - Result: Pass
-test_greater - input: 29 received: 23 - Result: Pass
-test_greater - input: 30 received: 22 - Result: Pass
-test_greater - input: 31 received: 21 - Result: Pass
-test_greater - input: 32 received: 20 - Result: Pass
-test_greater - input: 33 received: 19 - Result: Pass
-test_greater - input: 34 received: 18 - Result: Pass
-test_greater - input: 35 received: 17 - Result: Pass
-test_greater - input: 36 received: 16 - Result: Pass
-test_greater - input: 37 received: 15 - Result: Pass
-test_greater - input: 38 received: 14 - Result: Pass
-test_greater - input: 39 received: 13 - Result: Pass
-test_greater - input: 40 received: 12 - Result: Pass
-test_greater - input: 41 received: 11 - Result: Pass
-test_greater - input: 42 received: 10 - Result: Pass
-test_greater - input: 43 received: 9 - Result: Pass
-test_greater - input: 44 received: 8 - Result: Pass
-test_greater - input: 45 received: 7 - Result: Pass
-test_greater - input: 46 received: 6 - Result: Pass
-test_greater - input: 47 received: 5 - Result: Pass
-test_greater - input: 48 received: 4 - Result: Pass
-test_greater - input: 49 received: 3 - Result: Pass
-test_greater - input: 50 received: 2 - Result: Pass
+test_less - soma - input1: 1 - input2: 1 - expected: 12 - received: 2 - Result: Pass
+test_less - soma - input1: 2 - input2: 2 - expected: 12 - received: 4 - Result: Pass
+test_less - soma - input1: 3 - input2: 3 - expected: 12 - received: 6 - Result: Pass
+test_less - soma - input1: 4 - input2: 4 - expected: 12 - received: 8 - Result: Pass
+test_less - soma - input1: 5 - input2: 5 - expected: 12 - received: 10 - Result: Pass
 
-Passed: 24
+Passed: 5
