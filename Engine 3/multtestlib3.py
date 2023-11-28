@@ -85,6 +85,9 @@ def test_is(cpus, input1, input2, expected, process_function=None):
     # a is b compares the identity of the objects, checking if both variables refer to the same object in memory.
     operator = lambda x, y: x is y
     test = "test_is - "
+    print("*******")
+    print(cpus, input1, input2, expected, operator, test, process_function)
+    print("*******")
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
