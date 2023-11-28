@@ -1,11 +1,11 @@
-test_instance - input: <__main__.Carro object at 0x00000137695C0100> received: <class '__main__.Carro'> - Result: Pass
-test_instance - input: <__main__.Carro object at 0x00000137695C0100> received: <class '__main__.Carro'> - Result: Pass
-test_instance - input: <__main__.Carro object at 0x00000137695C0100> received: <class '__main__.Carro'> - Result: Pass
-test_instance - input: <__main__.Carro object at 0x00000137695C0100> received: <class '__main__.Carro'> - Result: Pass
-test_instance - input: <__main__.Carro object at 0x00000137695C0100> received: <class '__main__.Carro'> - Result: Pass
-test_instance - input: <__main__.Carro object at 0x00000137695C0100> received: <class '__main__.Carro'> - Result: Pass
-test_instance - input: <__main__.Carro object at 0x00000137695C0100> received: <class '__main__.Carro'> - Result: Pass
-test_instance - input: <__main__.Carro object at 0x00000137695C0100> received: <class '__main__.Carro'> - Result: Pass
-test_instance - input: <__main__.Carro object at 0x00000137695C0100> received: <class '__main__.Carro'> - Result: Pass
+test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
+test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
+test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
+test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
+test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
+test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
+test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
+test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
+test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
 
 Passed: 9

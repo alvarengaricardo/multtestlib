@@ -5,7 +5,11 @@ import multtestlib3 as mtl3
 import functions
 
 
-class Carro:
+class Veiculo:
+    pass
+
+
+class Carro(Veiculo):
     def __init__(self, cor, portas):
         self.cor = cor
         self.portas = portas
@@ -39,13 +43,13 @@ def main():
         for x in range(1, 11):
 
             if x == 5:
-                values.append(aviao1)
-                values2.append(Carro)
+                values.append(Aviao)
+                values2.append(Veiculo)
                 # values2.append(10)
 
             else:
-                values.append(carro3)
-                values2.append(Carro)
+                values.append(Carro)
+                values2.append(Veiculo)
 
             # values.append(x)
             # values2.append(x)
@@ -54,14 +58,17 @@ def main():
     functions.now()
     start_time = time.time()
 
-    mtl3.test_not_instance(4, values, "", values2)
+    #mtl3.test_not_instance(4, values, "", values2)
+    mtl3.test_issubclass(4, values, "", values2)
 
     end_time = time.time()
     functions.now()
     elapsed_time = end_time - start_time
     print(f"Tempo gasto: {elapsed_time} segundos.")
-   # print(values)
-   # print(values2)
+
+
+# print(values)
+# print(values2)
 
 
 if __name__ == "__main__":

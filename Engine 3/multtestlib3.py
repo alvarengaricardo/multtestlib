@@ -11,15 +11,17 @@ def engine1(input_item, expected_item, process_function, operator, test):
 
 
 def engine2(input_item, expected_item, operator, test):
-    print("motor2")
+    #print("motor2 a")
     #received = input_item
     line = line1c(test, input_item, expected_item)
+    #print("motor2 b")
     # filepass(line) if result == expected_item else filefail(line)
     filepass(line) if operator(input_item, expected_item) else filefail(line)
+    #print("motor2 c")
 
 
 def engine3(input_item, expected_item, input2_item, process_function, operator, test):
-    print("motor3")
+    #print("motor3")
     result = process_function(input_item, input2_item)
     line = line1b(test, process_function, input_item, input2_item, result, expected_item)
     # filepass(line) if result == expected_item else filefail(line)
@@ -126,6 +128,13 @@ def test_not_instance(cpus, input1, input2, expected, process_function=None):
    # filepass(line) if isinstance(a, b) is False else filefail(line)
     operator = lambda x, y: not isinstance(x, y)
     test = "test_not_instance - "
+    dispatcher(cpus, input1, input2, expected, operator, test, process_function)
+
+
+def test_issubclass(cpus, input1, input2, expected, process_function=None):
+    # Verifica se uma classe B é subclasse de A. Fornecer o nome da classe, não o objeto
+    operator = lambda x, y: issubclass(x, y)
+    test = "test_issubclass - "
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
