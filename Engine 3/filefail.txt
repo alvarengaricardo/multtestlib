@@ -1,3 +1,0 @@
-test_issubclass - input: <class '__main__.Aviao'> received: <class '__main__.Veiculo'> - Result: Fail
-
-Failed: 1

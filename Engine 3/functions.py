@@ -75,3 +75,6 @@ def maisum(a):
 
 def dobro(a):
     return a * 2
+
+def dezp(a):
+    return a * 0.1

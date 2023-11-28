@@ -1,11 +1,50 @@
-test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
-test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
-test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
-test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
-test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
-test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
-test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
-test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
-test_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Pass
+test_almost_equal - dezp - input: 2 - expected: 2.2 - received: 0.2 - Result: Pass
+test_almost_equal - dezp - input: 3 - expected: 3.3 - received: 0.30000000000000004 - Result: Pass
+test_almost_equal - dezp - input: 4 - expected: 4.4 - received: 0.4 - Result: Pass
+test_almost_equal - dezp - input: 7 - expected: 7.7 - received: 0.7000000000000001 - Result: Pass
+test_almost_equal - dezp - input: 5 - expected: 5.5 - received: 0.5 - Result: Pass
+test_almost_equal - dezp - input: 6 - expected: 6.6 - received: 0.6000000000000001 - Result: Pass
+test_almost_equal - dezp - input: 8 - expected: 8.8 - received: 0.8 - Result: Pass
+test_almost_equal - dezp - input: 9 - expected: 9.9 - received: 0.9 - Result: Pass
+test_almost_equal - dezp - input: 11 - expected: 12.1 - received: 1.1 - Result: Pass
+test_almost_equal - dezp - input: 12 - expected: 13.2 - received: 1.2000000000000002 - Result: Pass
+test_almost_equal - dezp - input: 13 - expected: 14.3 - received: 1.3 - Result: Pass
+test_almost_equal - dezp - input: 14 - expected: 15.4 - received: 1.4000000000000001 - Result: Pass
+test_almost_equal - dezp - input: 15 - expected: 16.5 - received: 1.5 - Result: Pass
+test_almost_equal - dezp - input: 16 - expected: 17.6 - received: 1.6 - Result: Pass
+test_almost_equal - dezp - input: 17 - expected: 18.7 - received: 1.7000000000000002 - Result: Pass
+test_almost_equal - dezp - input: 18 - expected: 19.8 - received: 1.8 - Result: Pass
+test_almost_equal - dezp - input: 19 - expected: 20.9 - received: 1.9000000000000001 - Result: Pass
+test_almost_equal - dezp - input: 20 - expected: 22.0 - received: 2.0 - Result: Pass
+test_almost_equal - dezp - input: 21 - expected: 23.1 - received: 2.1 - Result: Pass
+test_almost_equal - dezp - input: 22 - expected: 24.2 - received: 2.2 - Result: Pass
+test_almost_equal - dezp - input: 23 - expected: 25.3 - received: 2.3000000000000003 - Result: Pass
+test_almost_equal - dezp - input: 24 - expected: 26.4 - received: 2.4000000000000004 - Result: Pass
+test_almost_equal - dezp - input: 26 - expected: 28.6 - received: 2.6 - Result: Pass
+test_almost_equal - dezp - input: 27 - expected: 29.7 - received: 2.7 - Result: Pass
+test_almost_equal - dezp - input: 25 - expected: 27.5 - received: 2.5 - Result: Pass
+test_almost_equal - dezp - input: 28 - expected: 30.8 - received: 2.8000000000000003 - Result: Pass
+test_almost_equal - dezp - input: 29 - expected: 31.9 - received: 2.9000000000000004 - Result: Pass
+test_almost_equal - dezp - input: 30 - expected: 33.0 - received: 3.0 - Result: Pass
+test_almost_equal - dezp - input: 31 - expected: 34.1 - received: 3.1 - Result: Pass
+test_almost_equal - dezp - input: 32 - expected: 35.2 - received: 3.2 - Result: Pass
+test_almost_equal - dezp - input: 35 - expected: 38.5 - received: 3.5 - Result: Pass
+test_almost_equal - dezp - input: 33 - expected: 36.3 - received: 3.3000000000000003 - Result: Pass
+test_almost_equal - dezp - input: 34 - expected: 37.4 - received: 3.4000000000000004 - Result: Pass
+test_almost_equal - dezp - input: 38 - expected: 41.8 - received: 3.8000000000000003 - Result: Pass
+test_almost_equal - dezp - input: 36 - expected: 39.6 - received: 3.6 - Result: Pass
+test_almost_equal - dezp - input: 39 - expected: 42.9 - received: 3.9000000000000004 - Result: Pass
+test_almost_equal - dezp - input: 37 - expected: 40.7 - received: 3.7 - Result: Pass
+test_almost_equal - dezp - input: 42 - expected: 46.2 - received: 4.2 - Result: Pass
+test_almost_equal - dezp - input: 41 - expected: 45.1 - received: 4.1000000000000005 - Result: Pass
+test_almost_equal - dezp - input: 40 - expected: 44.0 - received: 4.0 - Result: Pass
+test_almost_equal - dezp - input: 43 - expected: 47.3 - received: 4.3 - Result: Pass
+test_almost_equal - dezp - input: 45 - expected: 49.5 - received: 4.5 - Result: Pass
+test_almost_equal - dezp - input: 46 - expected: 50.6 - received: 4.6000000000000005 - Result: Pass
+test_almost_equal - dezp - input: 44 - expected: 48.4 - received: 4.4 - Result: Pass
+test_almost_equal - dezp - input: 48 - expected: 52.8 - received: 4.800000000000001 - Result: Pass
+test_almost_equal - dezp - input: 47 - expected: 51.7 - received: 4.7 - Result: Pass
+test_almost_equal - dezp - input: 49 - expected: 53.9 - received: 4.9 - Result: Pass
+test_almost_equal - dezp - input: 50 - expected: 55.0 - received: 5.0 - Result: Pass
 
-Passed: 9
+Passed: 48

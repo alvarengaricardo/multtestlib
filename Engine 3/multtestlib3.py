@@ -3,7 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 
 def engine1(input_item, expected_item, process_function, operator, test):
-    print("motor1")
+    # print("motor1")
     result = process_function(input_item)
     line = line1a(test, process_function, input_item, result, expected_item)
     # filepass(line) if result == expected_item else filefail(line)
@@ -11,17 +11,17 @@ def engine1(input_item, expected_item, process_function, operator, test):
 
 
 def engine2(input_item, expected_item, operator, test):
-    #print("motor2 a")
-    #received = input_item
+    # print("motor2 a")
+    # received = input_item
     line = line1c(test, input_item, expected_item)
-    #print("motor2 b")
+    # print("motor2 b")
     # filepass(line) if result == expected_item else filefail(line)
     filepass(line) if operator(input_item, expected_item) else filefail(line)
-    #print("motor2 c")
+    # print("motor2 c")
 
 
 def engine3(input_item, expected_item, input2_item, process_function, operator, test):
-    #print("motor3")
+    # print("motor3")
     result = process_function(input_item, input2_item)
     line = line1b(test, process_function, input_item, input2_item, result, expected_item)
     # filepass(line) if result == expected_item else filefail(line)
@@ -105,7 +105,7 @@ def test_in(cpus, input1, input2, expected, process_function=None):
     # verifica se input1 existe em alguma posição em input2
     operator = lambda x, y: x in y
     test = "test_in - "
-    #run_test4(input1, expected, operator, test)
+    # run_test4(input1, expected, operator, test)
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
@@ -115,17 +115,18 @@ def test_not_in(cpus, input1, input2, expected, process_function=None):
     test = "test_not_in - "
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
+
 def test_instance(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: isinstance(x, y)
     test = "test_instance - "
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
-    #line = line1('test_instance', a, b)
-    #filepass(line) if isinstance(a, b) else filefail(line)
+    # line = line1('test_instance', a, b)
+    # filepass(line) if isinstance(a, b) else filefail(line)
 
 
 def test_not_instance(cpus, input1, input2, expected, process_function=None):
-   # line = line1('test_not_instance', a, b)
-   # filepass(line) if isinstance(a, b) is False else filefail(line)
+    # line = line1('test_not_instance', a, b)
+    # filepass(line) if isinstance(a, b) is False else filefail(line)
     operator = lambda x, y: not isinstance(x, y)
     test = "test_not_instance - "
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
@@ -143,17 +144,6 @@ def test_not_issubclass(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: not issubclass(x, y)
     test = "test_not_issubclass - "
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
-
-
-def test_almost_equal(a, b, c):
-    # testa se o arredondamendo de a-b com c casas decimais é zero
-    line = line1('test_almost_equal', a, b)
-    filepass(line) if round(a - b, c) == 0 else filefail(line)
-
-
-def test_not_almost_equal(a, b, c):
-    line = line1('test_not_almost_equal', a, b)
-    filepass(line) if round(a - b, c) != 0 else filefail(line)
 
 
 def test_greater(a, b):
