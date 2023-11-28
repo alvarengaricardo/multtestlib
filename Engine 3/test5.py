@@ -19,14 +19,14 @@ def main():
     for i in range(0, 1):
         for x in range(1, 51):
             values.append(x)
-            values2.append(x)
+            values2.append(x+fator)
             expected.append(x + x + fator)
             fator -= 2
 
     functions.now()
     start_time = time.time()
-    mtl3.test_less(1, values,values2, expected, functions.soma)
-    #mtl3.test_less(1, values, "", values2)
+    #mtl3.test_less_equal(1, values,values2, expected, functions.soma)
+    mtl3.test_less_equal(1, values, "", values2)
     end_time = time.time()
     functions.now()
     elapsed_time = end_time - start_time
