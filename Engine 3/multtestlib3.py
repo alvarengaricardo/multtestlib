@@ -3,7 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 
 def engine1(input_item, expected_item, process_function, operator, test):
-    #print("motor1")
+    print("motor1")
     result = process_function(input_item)
     line = line1a(test, process_function, input_item, result, expected_item)
     # filepass(line) if result == expected_item else filefail(line)
@@ -11,7 +11,7 @@ def engine1(input_item, expected_item, process_function, operator, test):
 
 
 def engine2(input_item, expected_item, operator, test):
-    #print("motor2")
+    print("motor2")
     #received = input_item
     line = line1c(test, input_item, expected_item)
     # filepass(line) if result == expected_item else filefail(line)
@@ -19,7 +19,7 @@ def engine2(input_item, expected_item, operator, test):
 
 
 def engine3(input_item, expected_item, input2_item, process_function, operator, test):
-    #print("motor3")
+    print("motor3")
     result = process_function(input_item, input2_item)
     line = line1b(test, process_function, input_item, input2_item, result, expected_item)
     # filepass(line) if result == expected_item else filefail(line)
@@ -113,10 +113,12 @@ def test_not_in(cpus, input1, input2, expected, process_function=None):
     test = "test_not_in - "
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
-
-def test_instance(a, b):
-    line = line1('test_instance', a, b)
-    filepass(line) if isinstance(a, b) else filefail(line)
+def test_instance(cpus, input1, input2, expected, process_function=None):
+    operator = lambda x, y: isinstance(x, y)
+    test = "test_instance - "
+    dispatcher(cpus, input1, input2, expected, operator, test, process_function)
+    #line = line1('test_instance', a, b)
+    #filepass(line) if isinstance(a, b) else filefail(line)
 
 
 def test_not_instance(a, b):
