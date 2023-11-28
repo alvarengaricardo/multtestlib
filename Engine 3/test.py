@@ -1,4 +1,6 @@
 import time
+from typing import List
+
 import multtestlib3 as mtl3
 import functions
 
@@ -17,21 +19,24 @@ def main():
     carro3 = Carro("Vermelho", 2)
 
     # Criar a lista "values" usando um loop "for"
-    values = []
+    values: List[int] = []
     values2 = []
     values3 = []
     a = [1, 2, 3]
-    b = a
+    b = [4, 5, 6]
+    c = [1, 2]
+
     for i in range(0, 1):
-        for x in range(1, 21):
+        for x in range(1, 11):
 
             if x == 5:
-                values.append([1, 2, 3])
+                values.append(a)
+                values2.append(a)
                 #values2.append(10)
-                values2.append([1, 2, 2, 3, 5])
+
             else:
                 values.append(x)
-                values2.append([x-3, x, x-2, x+2, x+1])
+                values2.append(b)
 
             #values.append(x)
             #values2.append(x)
@@ -39,7 +44,8 @@ def main():
 
     functions.now()
     start_time = time.time()
-    mtl3.test_not_in(4, values, "", values2, functions.slow_function)
+    mtl3.test_not_in(4, values, "", values2)
+    #mtl3.test_equal(4, values, values, values2, functions.soma)
     #mtl3.test_is(1, values, values2)
     #mtl3.test_equal(1, values, "", values2)
     #mtl3.test_is(1, 3, "", 4)
@@ -55,6 +61,8 @@ def main():
     functions.now()
     elapsed_time = end_time - start_time
     print(f"Tempo gasto: {elapsed_time} segundos.")
+    print(values)
+    print(values2)
 
 
 if __name__ == "__main__":

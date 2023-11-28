@@ -12,10 +12,10 @@ def engine1(input_item, expected_item, process_function, operator, test):
 
 def engine2(input_item, expected_item, operator, test):
     #print("motor2")
-    result = input_item
-    line = line1c(test, input_item, result, expected_item)
+    #received = input_item
+    line = line1c(test, input_item, expected_item)
     # filepass(line) if result == expected_item else filefail(line)
-    filepass(line) if operator(result, expected_item) else filefail(line)
+    filepass(line) if operator(input_item, expected_item) else filefail(line)
 
 
 def engine3(input_item, expected_item, input2_item, process_function, operator, test):
@@ -165,9 +165,8 @@ def line1b(test, ff, input, input2, result, expected):
         expected) + ' - ' + 'received: ' + str(result) + ' - ' + 'Result: ')
 
 
-def line1c(test, input, result, expected):
-    return (str(test) + 'input: ' + str(input) + ' expected: ' + str(
-        expected) + ' received: ' + str(result) + ' Result: ')
+def line1c(test, input, received):
+    return (str(test) + 'input: ' + str(input) + ' received: ' + str(received) + ' - ' + 'Result: ')
 
 
 def line1d(test, input, expected):
