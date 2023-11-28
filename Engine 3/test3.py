@@ -59,7 +59,7 @@ def main():
     start_time = time.time()
 
     #mtl3.test_not_instance(4, values, "", values2)
-    mtl3.test_issubclass(4, values, "", values2)
+    mtl3.test_not_issubclass(4, values, "", values2)
 
     end_time = time.time()
     functions.now()

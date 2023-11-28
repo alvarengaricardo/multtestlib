@@ -138,6 +138,13 @@ def test_issubclass(cpus, input1, input2, expected, process_function=None):
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
+def test_not_issubclass(cpus, input1, input2, expected, process_function=None):
+    # Verifica se uma classe B não é subclasse de A. Fornecer o nome da classe, não o objeto
+    operator = lambda x, y: not issubclass(x, y)
+    test = "test_not_issubclass - "
+    dispatcher(cpus, input1, input2, expected, operator, test, process_function)
+
+
 def test_almost_equal(a, b, c):
     # testa se o arredondamendo de a-b com c casas decimais é zero
     line = line1('test_almost_equal', a, b)
