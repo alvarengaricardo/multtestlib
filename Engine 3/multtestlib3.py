@@ -121,9 +121,12 @@ def test_instance(cpus, input1, input2, expected, process_function=None):
     #filepass(line) if isinstance(a, b) else filefail(line)
 
 
-def test_not_instance(a, b):
-    line = line1('test_not_instance', a, b)
-    filepass(line) if isinstance(a, b) is False else filefail(line)
+def test_not_instance(cpus, input1, input2, expected, process_function=None):
+   # line = line1('test_not_instance', a, b)
+   # filepass(line) if isinstance(a, b) is False else filefail(line)
+    operator = lambda x, y: not isinstance(x, y)
+    test = "test_not_instance - "
+    dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_almost_equal(a, b, c):
