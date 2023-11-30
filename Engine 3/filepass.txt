@@ -1,8 +1,4 @@
-test_less_equal - input: 1 received: 11 - Result: Pass
-test_less_equal - input: 2 received: 10 - Result: Pass
-test_less_equal - input: 3 received: 9 - Result: Pass
-test_less_equal - input: 4 received: 8 - Result: Pass
-test_less_equal - input: 5 received: 7 - Result: Pass
-test_less_equal - input: 6 received: 6 - Result: Pass
+test_not_issubclass - input: <class '__main__.Aviao'> received: <class '__main__.Veiculo'> - Result: Pass
 
-Passed: 6
+Passed: 1
+2023-11-30 14:47:07

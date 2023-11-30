@@ -1,3 +1,4 @@
+from datetime import datetime
 import os
 from concurrent.futures import ThreadPoolExecutor
 
@@ -158,9 +159,9 @@ def line_c(test, input, received):
     return (str(test) + 'input: ' + str(input) + ' received: ' + str(received) + ' - ' + 'Result: ')
 
 
-def line2(ff, a, b, expected, received):
-    return ('Function: ' + str(ff.__name__) + ' a: ' + str(a) + ' b: ' + str(b) + ' expected: ' + str(
-        expected) + ' received: ' + str(received) + ' Result: ')
+def get_date_time():
+    now = datetime.now()
+    return now.strftime("%Y-%m-%d %H:%M:%S")
 
 
 def init():
@@ -175,6 +176,7 @@ def init():
 
 
 def end():
+    current_datetime = get_date_time()
     if os.path.exists('filetot.txt'):
         with open('filetot.txt') as f:
             tl = len(f.readlines())
@@ -182,6 +184,8 @@ def end():
             ft = open('filetot.txt', 'a')
             ft.write('\n')
             ft.write('Total: ' + str(tl))
+            ft.write('\n')
+            ft.write(current_datetime)
             ft.close()
     if os.path.exists('filepass.txt'):
         with open('filepass.txt') as f:
@@ -190,6 +194,8 @@ def end():
             fp = open('filepass.txt', 'a')
             fp.write('\n')
             fp.write('Passed: ' + str(tl))
+            fp.write('\n')
+            fp.write(current_datetime)
             fp.close()
     if os.path.exists('filefail.txt'):
         with open('filefail.txt') as f:
@@ -198,6 +204,8 @@ def end():
             ff = open('filefail.txt', 'a')
             ff.write('\n')
             ff.write('Failed: ' + str(tl))
+            ff.write('\n')
+            ff.write(current_datetime)
             ff.close()
     global vector
 
