@@ -1,12 +1,47 @@
-test_not_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Fail
-test_not_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Fail
-test_not_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Fail
-test_not_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Fail
-test_not_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Fail
-test_not_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Fail
-test_not_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Fail
-test_not_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Fail
-test_not_issubclass - input: <class '__main__.Carro'> received: <class '__main__.Veiculo'> - Result: Fail
+test_less_equal - input: 7 received: 5 - Result: Fail
+test_less_equal - input: 8 received: 4 - Result: Fail
+test_less_equal - input: 9 received: 3 - Result: Fail
+test_less_equal - input: 10 received: 2 - Result: Fail
+test_less_equal - input: 11 received: 1 - Result: Fail
+test_less_equal - input: 12 received: 0 - Result: Fail
+test_less_equal - input: 13 received: -1 - Result: Fail
+test_less_equal - input: 14 received: -2 - Result: Fail
+test_less_equal - input: 15 received: -3 - Result: Fail
+test_less_equal - input: 16 received: -4 - Result: Fail
+test_less_equal - input: 17 received: -5 - Result: Fail
+test_less_equal - input: 18 received: -6 - Result: Fail
+test_less_equal - input: 19 received: -7 - Result: Fail
+test_less_equal - input: 20 received: -8 - Result: Fail
+test_less_equal - input: 21 received: -9 - Result: Fail
+test_less_equal - input: 22 received: -10 - Result: Fail
+test_less_equal - input: 23 received: -11 - Result: Fail
+test_less_equal - input: 24 received: -12 - Result: Fail
+test_less_equal - input: 25 received: -13 - Result: Fail
+test_less_equal - input: 26 received: -14 - Result: Fail
+test_less_equal - input: 27 received: -15 - Result: Fail
+test_less_equal - input: 28 received: -16 - Result: Fail
+test_less_equal - input: 29 received: -17 - Result: Fail
+test_less_equal - input: 30 received: -18 - Result: Fail
+test_less_equal - input: 31 received: -19 - Result: Fail
+test_less_equal - input: 32 received: -20 - Result: Fail
+test_less_equal - input: 33 received: -21 - Result: Fail
+test_less_equal - input: 34 received: -22 - Result: Fail
+test_less_equal - input: 35 received: -23 - Result: Fail
+test_less_equal - input: 36 received: -24 - Result: Fail
+test_less_equal - input: 37 received: -25 - Result: Fail
+test_less_equal - input: 38 received: -26 - Result: Fail
+test_less_equal - input: 39 received: -27 - Result: Fail
+test_less_equal - input: 40 received: -28 - Result: Fail
+test_less_equal - input: 41 received: -29 - Result: Fail
+test_less_equal - input: 42 received: -30 - Result: Fail
+test_less_equal - input: 43 received: -31 - Result: Fail
+test_less_equal - input: 44 received: -32 - Result: Fail
+test_less_equal - input: 45 received: -33 - Result: Fail
+test_less_equal - input: 46 received: -34 - Result: Fail
+test_less_equal - input: 47 received: -35 - Result: Fail
+test_less_equal - input: 48 received: -36 - Result: Fail
+test_less_equal - input: 49 received: -37 - Result: Fail
+test_less_equal - input: 50 received: -38 - Result: Fail
 
-Failed: 9
-2023-11-30 14:47:07
+Failed: 44
+2023-12-01 06:41:46
