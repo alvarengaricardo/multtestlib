@@ -1,6 +1,6 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.2
 Name: multtestlib
-Version: 2023.3
+Version: 2023.4
 Summary: Library for executing unit tests, in Python, using parallel processing.
 Author-email: Ricardo Alvarenga <alvarenga.r.ricardo@gmail.com>
 License: Copyright (c) 2022 Ricardo Ribeiro de Alvarenga
@@ -32,42 +32,41 @@ License-File: LICENSE
 
  # multtestlib
 
-**multtestlib** is a library for running unit tests using processing parallel, written in Python.
+**multtestlib** (2023.4) is a library for running unit tests using processing parallel, written in Python.
 
-![table](https://user-images.githubusercontent.com/16055876/222324613-78df26fa-1cf5-48ce-b8e8-4018d6a2224c.png)
+![table](https://github.com/alvarengaricardo/multtestlib/blob/main/table.png?raw=true.png)
 
 ## Example
 
 **Code:**
 
-    import multtestlib  
+    import multtestlib as mtl
+    import library_to_test as ltt
+
+
     def main():
-    
-    a = 90  
-    b = 35  
-    c = 12
-    
-    with multtestlib.Pool() as pool:
-	    pool.starmap(multtestlib.test_equal,
-		[(a, 90),
-		 (b, 35),
-		 (c, 12)])
-    		 
-    if __name__ == "__main__":  
-        multtestlib.init()  
-        multtestlib.freeze_support()  
-        main()  
-        multtestlib.end()
+        # Specify the number of CPUs to be used.
+        cpus = 4
 
-**Output:**
+        # Create one, or two, array with the input parameters.
+        array_in1 = [a, b, c, d, e]
+        array_in2 = [aa, bb, cc, dd, ee]
 
-    test_equal - a: 35 b: 35 Result: Pass
-    test_equal - a: 90 b: 90 Result: Pass
-    test_equal - a: 12 b: 12 Result: Pass
-    Total: 3
-    Passed: 3
+        # Create one, or two, array with the output parameters (expected values).
+        array_out = [f, g, h, i, j]
 
-**Generated Files**
+        # Provide the parameters for the selected test function.
+        # In this example "test_equal".
+        mtl.test_equal(cpus, array_in1, array_in1, array_out, ltt.function_to_test)
+
+
+    if __name__ == "__main__":
+        mtl.init()
+        main()
+        mtl.end()
+
+
+**Generated Files, with the results**
 
     filepass.txt -> Contains passed tests
     filefail.txt -> Contains failed tests

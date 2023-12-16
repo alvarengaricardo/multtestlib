@@ -1,6 +1,6 @@
  # multtestlib
 
-**multtestlib** is a library for running unit tests using processing parallel, written in Python.
+**multtestlib** (2023.4) is a library for running unit tests using processing parallel, written in Python.
 
 ![table](https://github.com/alvarengaricardo/multtestlib/blob/main/table.png?raw=true.png)
 
