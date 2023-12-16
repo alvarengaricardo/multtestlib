@@ -1,6 +1,6 @@
 [project]
 name = "multtestlib"
-version = "2023.3"
+version = "2023.5"
 authors = [
   { name="Ricardo Alvarenga", email="alvarenga.r.ricardo@gmail.com" },
 ]
