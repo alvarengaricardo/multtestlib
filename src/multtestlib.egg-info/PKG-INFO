@@ -1,4 +1,4 @@
-Metadata-Version: 2.2
+Metadata-Version: 2.1
 Name: multtestlib
 Version: 2023.4
 Summary: Library for executing unit tests, in Python, using parallel processing.
@@ -42,7 +42,7 @@ License-File: LICENSE
 
     import multtestlib as mtl
     import library_to_test as ltt
-
+    
 
     def main():
         # Specify the number of CPUs to be used.
