@@ -1,10 +1,10 @@
 [project]
 name = "multtestlib"
-version = "2023.4"
+version = "1.0"
 authors = [
   { name="Ricardo Alvarenga", email="alvarenga.r.ricardo@gmail.com" },
 ]
-description = "Library for executing unit tests, in Python, using parallel processing."
+description = "Package for executing unit tests, in Python, using parallel processing."
 readme = "README.md"
 license = { file="LICENSE" }
 requires-python = ">=3.7"

@@ -1,13 +1,14 @@
 '''
-    multtestlib 2023.4
+    multtestlib 1.0
     Python package for running unit tests in parallel processing.
-    Engine II
     By Ricardo Ribeiro de Alvarenga
        alvarenga.r.ricardo@gmail.com
 
-    ITA - Instituto Tecnológico de Aeronáutica - BRAZIL
+    ITA - Instituto Tecnológico de Aeronáutica - Brasil
+          Aeronautics Institute of Thecnology  - Brazil
+    
 
-    December 2023
+    March 2024
 
 '''
 
@@ -249,11 +250,11 @@ def about():
     print(" Author: Ricardo Ribeiro de Alvarenga")
     print("         ITA - Instituto Tecnologico de Aeronáutica")
     print("         Brazil")
-    print(" Version: 2023.4 (Engine II)")
+    print(" Version: 1.0")
     print("")
 
 
-def sos():
+def help():
     print("")
     print("")
     print("-----------------------------------------------")
@@ -268,7 +269,7 @@ def sos():
     print("test_instance             isinstance(x, y)")
     print("test_not_instance         not isinstance(x, y)")
     print("test_issubclass           issubclass(x, y)")
-    print("test_test_not_issubclass  not issubclass(x, y)")
+    print("test_not_issubclass       not issubclass(x, y)")
     print("test_greater              x > y")
     print("test_greater_equal        x >= y")
     print("test_less                 x < y")
