@@ -6,5 +6,8 @@
 *.gz
 *.whl
 *.xlsx
+.gitignore
+.pypirc
+
 
 
