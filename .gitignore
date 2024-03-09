@@ -1,5 +1,8 @@
 *.bak
 *.py.bak
 *.bat
+*.gz
+*.whl
+
 
 
