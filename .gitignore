@@ -1,8 +1,8 @@
+.idea/
 *.bak
 *.py.bak
 *.bat
 *.gz
 *.whl
-.idea/
 
 
