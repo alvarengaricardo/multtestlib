@@ -1,4 +1,5 @@
 .idea/
+.idea
 *.bak
 *.py.bak
 *.bat
