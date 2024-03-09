@@ -1,7 +1,5 @@
 # multtestlib: A package developed for performing unit tests in Python using parallel processing.
 
----
-
 Multtestlib has been devised to aid Python testers in expediting their testing processes through non-distributed parallel processing. This approach allows customizable utilization of the computer's available processor cores, facilitating workload distribution and consequent reduction in the overall execution time of the test suite.
 
 ---
