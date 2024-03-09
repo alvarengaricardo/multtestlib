@@ -4,7 +4,7 @@ version = "1.00"
 authors = [
   { name="Ricardo Alvarenga", email="alvarenga.r.ricardo@gmail.com" },
 ]
-description = "Multtestlib, a package developed for performing unit tests in Python using parallel processing.
+description = "Multtestlib, a package developed for performing unit tests in Python using parallel processing."
 readme = "README.md"
 license = { file="LICENSE" }
 requires-python = ">=3.7"
