@@ -3,6 +3,6 @@
 *.bat
 *.gz
 *.whl
-
+.idea/
 
 
