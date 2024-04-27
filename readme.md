@@ -3,10 +3,8 @@
 Multtestlib has been devised to aid Python testers in expediting their testing processes through multiprocessing. This approach allows customizable utilization of the computer's available processor cores, facilitating workload distribution and consequent reduction in the overall execution time of the test suite.
 
 ---
-![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0-brightgreen)
-
+![GitHub release](https://img.shields.io/github/release/alvarengaricardo/multtestlib.svg)](https://github.com/alvarengaricardo/multtestlib/releases/) [![Python](https://img.shields.io/badge/Python-%3E%3D%203.7-blue.svg)](https://www.python.org/downloads/) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Downloads](https://pepy.tech/badge/multtestlib)](https://pepy.tech/project/multtestlib)
 ---
-
 
 ## Installation
 
