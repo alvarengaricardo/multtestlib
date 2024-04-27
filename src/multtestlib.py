@@ -1,5 +1,5 @@
 '''
-    multtestlib 1.0
+    multtestlib 1.01
     Python package for running unit tests in parallel processing.
     By Ricardo Ribeiro de Alvarenga
        alvarenga.r.ricardo@gmail.com
@@ -8,7 +8,7 @@
           Aeronautics Institute of Thecnology  - Brazil
     
 
-    March 2024
+    April 2024
 
 '''
 
@@ -250,7 +250,7 @@ def about():
     print(" Author: Ricardo Ribeiro de Alvarenga")
     print("         ITA - Instituto Tecnologico de Aeronáutica")
     print("         Brazil")
-    print(" Version: 1.0")
+    print(" Version: 1.01")
     print("")
 
 
