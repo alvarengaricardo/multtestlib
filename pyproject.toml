@@ -1,19 +1,19 @@
 [project]
 name = "multtestlib"
-version = "1.01"
+version = "1.0.1"
 authors = [
-  { name="Ricardo Alvarenga", email="alvarenga.r.ricardo@gmail.com" },
+  { name = "Ricardo Alvarenga", email = "ricardoalvarenga@ita.br" }
 ]
-description = "Multtestlib, a package developed for performing unit tests in Python using parallel processing."
+description = "Multtestlib, a package developed for performing unit tests in Python using multiprocessing."
 readme = "README.md"
-license = { file="LICENSE" }
+license = { file = "LICENSE" }
 requires-python = ">=3.7"
 classifiers = [
-    "Programming Language :: Python :: >= 3.7",
+    "Programming Language :: Python :: 3.7",
     "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
+    "Operating System :: OS Independent"
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/alvarengaricardo/multtestlib"
+homepage = "https://github.com/alvarengaricardo/multtestlib"
 
