@@ -1,6 +1,6 @@
-# multtestlib: A package developed for performing unit tests in Python using parallel processing.
+# multtestlib: A package developed for performing unit tests in Python using multiprocessing.
 
-Multtestlib has been devised to aid Python testers in expediting their testing processes through non-distributed parallel processing. This approach allows customizable utilization of the computer's available processor cores, facilitating workload distribution and consequent reduction in the overall execution time of the test suite.
+Multtestlib has been devised to aid Python testers in expediting their testing processes through multiprocessing. This approach allows customizable utilization of the computer's available processor cores, facilitating workload distribution and consequent reduction in the overall execution time of the test suite.
 
 ---
 
@@ -20,9 +20,9 @@ Multtestlib requires Python 3.7 or later to run.
 
 ## Usage
 
-For parallel processing usage, the input parameters of the test functions and their respective expected values must be stored in lists. During the test processing, multtestlib will take care of distributing and managing the data contained in the lists - and functions - among the processor cores indicated in the test program.
+For multiprocessing usage, the input parameters of the test functions and their respective expected values must be stored in lists. During the test processing, multtestlib will take care of distributing and managing the data contained in the lists - and functions - among the processor cores indicated in the test program.
 
-Next, we will see an example of a unit test for the **myfunction(a, b)** being submitted for execution using parallel processing:
+Next, we will see an example of a unit test for the **myfunction(a, b)** being submitted for execution using multiprocessing:
 
     import multtestlib as mtl
     import functions

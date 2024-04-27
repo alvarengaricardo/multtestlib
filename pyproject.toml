@@ -1,6 +1,6 @@
 [project]
 name = "multtestlib"
-version = "1.00"
+version = "1.01"
 authors = [
   { name="Ricardo Alvarenga", email="alvarenga.r.ricardo@gmail.com" },
 ]
@@ -9,7 +9,7 @@ readme = "README.md"
 license = { file="LICENSE" }
 requires-python = ">=3.7"
 classifiers = [
-    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: >= 3.7",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
