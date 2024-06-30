@@ -24,13 +24,18 @@ Multtestlib requires Python 3.7 or later to run.
 
 For multiprocessing usage, the input parameters of the test functions and their respective expected values must be stored in lists. During the test processing, multtestlib will take care of distributing and managing the data contained in the lists - and functions - among the processor cores indicated in the test program.
 
-Next, we will see an example of a unit test for the **myfunction(a, b)** being submitted for execution using multiprocessing:
+Here are some code snippets illustrating the usage of multtestlib:
 
+    # It is strongly recommended to create a test function to be called by the main() function.
+    
     import multtestlib as mtl
     import functions
 
-    def main():
-        cpus = 8 # Specify the number of CPUs to be used.
+    def tester():
+
+        # Detects the maximum number of CPUs available in the system
+        cpu = mtl.max_cpu()
+
         input_values1 = []
 	    input_values2 = []
 	    return_values = []
@@ -38,12 +43,26 @@ Next, we will see an example of a unit test for the **myfunction(a, b)** being s
         # It is necessary to store the input data and
 	    # expected values in their respective lists.
 
-        mtl.test_equal(cpus, input_values1, input_values2, return_values, functions.myfunction)
+        mtl.test_equal(cpu, input_values1, input_values2, return_values, functions.myfunction)
+
+        # Parameters can be omitted, when necessary, by using "":
+        mtl.test_equal(cpu, input_values1, "", return_values, functions.myfunction)
     
+        # The code units to be tested can also be stored in lists:
+        list_functions = [functions.add,
+                          functions.add,
+                          ...
+                          functions.subtract,
+                          functions.subtract]
+       
+        # When testing methods of a class, create a function (outside of the class) to invoke it:
+          def method(object):
+              return object.method()
+        
 	
     if __name__ == "__main__":
         mtl.init()
-        main()
+        tester()
         mtl.end()
 ---
 
