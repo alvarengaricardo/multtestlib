@@ -24,7 +24,18 @@ Multtestlib requires Python 3.7 or later to run.
 
 For multiprocessing usage, the input parameters of the test functions and their respective expected values must be stored in lists. During the test processing, multtestlib will take care of distributing and managing the data contained in the lists - and functions - among the processor cores indicated in the test program.
 
-Here are some code snippets illustrating the usage of multtestlib:
+The signature of the methods in multtestlib: mtl.command(cpu, list_1, list_2, expected_list, subject_to_test)
+
+Where:
+    mtl: It is the suggested alias for multtestlib;
+	.command: Specifies the test command (see Table \ref{tab:comandos}), which is a function of \texttt{mtl};
+	cpu: The amount of CPU cores designated for running the test. It could be defined either statically, by the developer/tester, or dynamically with the command \texttt{cpu = mtl.max\_cpu()};
+	list_1: The test requires the provision of this initial set of input parameters. The package passes the iteration element as an input parameter of the code unit under test, no matter what type of data it contains;
+	list_2: If needed, this parameter specifies the second input list of the unit being evaluated. If a second parameter is not necessary, the list should be substituted with \texttt{""};
+	expected_list: Identifies the list that holds the anticipated outcome values for every test;
+	subject_to_test: This parameter specifies the unit that will undergo testing. It could be a function, a class method, or a list of code units for testing purposes.
+
+Here is a code example illustrating the usage of multtestlib:
 
     # It is strongly recommended to create a test function to be called by the main() function.
     
