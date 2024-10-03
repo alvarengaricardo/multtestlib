@@ -29,41 +29,54 @@ Here are some code snippets illustrating the usage of multtestlib:
     # It is strongly recommended to create a test function to be called by the main() function.
     
     import multtestlib as mtl
-    import functions
 
+
+    # Class to be tested
+    class Cube:
+    def __init__(self, side_length):
+        self.side_length = side_length
+
+    def calculate_volume(self):
+        return self.side_length ** 3
+
+
+    # Functions to be tested
+    def add(a, b):
+        return (a + b)
+
+
+    def subtract(a, b):
+        return a - b
+
+
+    # Wrapper function to test a class method
+    # When testing methods of a class, create a function (outside of the class)
+    # to invoke it:
+    # def method(object):
+    #     return object.method()
+    def calculate_volume(cube):
+        return cube.calculate_volume()
+
+
+    # The tester function
     def tester():
+        argument_list_a = [1, 2, 3, 5, 7, 9]
+        argument_list_b = [2, 3, 4, 4, 3, 6]
+        expected_list = [3, 5, 7, 1, 4, 2]
+        functions_list = [add, add, add, subtract, subtract, subtract]
+        argument_list_cube = [Cube(3), Cube(4), Cube(5)]
+        expected_list_cube = [27, 64, 125]
+        functions_list_cube = [calculate_volume, calculate_volume, calculate_volume]
+        cpu = 1
+        mtl.test_equal(cpu, argument_list_a, argument_list_b, expected_list, functions_list)
+        mtl.test_equal(cpu, argument_list_cube, "", expected_list_cube, functions_list_cube)
 
-        # Detects the maximum number of CPUs available in the system
-        cpu = mtl.max_cpu()
 
-        input_values1 = []
-	    input_values2 = []
-	    return_values = []
-		
-        # It is necessary to store the input data and
-	    # expected values in their respective lists.
-
-        mtl.test_equal(cpu, input_values1, input_values2, return_values, functions.myfunction)
-
-        # Parameters can be omitted, when necessary, by using "":
-        mtl.test_equal(cpu, input_values1, "", return_values, functions.myfunction)
-    
-        # The code units to be tested can also be stored in lists:
-        list_functions = [functions.add,
-                          functions.add,
-                          ...
-                          functions.subtract,
-                          functions.subtract]
-       
-        # When testing methods of a class, create a function (outside of the class) to invoke it:
-          def method(object):
-              return object.method()
-        
-	
     if __name__ == "__main__":
         mtl.init()
         tester()
         mtl.end()
+
 ---
 
 ## Output Files
