@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-'''
-    multtestlib 1.1
+"""
+    multtestlib 1.2
     Python package for running unit tests in parallel processing.
     By Ricardo Ribeiro de Alvarenga
        ricardoalvarenga@ita.br
@@ -8,37 +8,58 @@
     ITA - Instituto Tecnológico de Aeronáutica - Brasil
           Aeronautics Institute of Thecnology  - Brazil
 
-    June 2024
-'''
+    October 2024
+"""
 
-from datetime import datetime
-import threading, os
+
+import os
+import threading
 from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime
 
 file_lock = threading.Lock()
+output_filename = None  # Variável para armazenar o nome do arquivo globalmente
 
 
 def engine1(input_item, expected_item, process_function, operator, test):
+    start_time = datetime.now()
     if process_function is not None:
         result = process_function(input_item)
     else:
         result = input_item
-    line = line_a(test, process_function, input_item, result, expected_item)
-    filepass(line) if operator(result, expected_item) else filefail(line)
+    execution_time = (datetime.now() - start_time).total_seconds()
+    test_passed = operator(result, expected_item)
+
+    # Chama a função file_output com todos os parâmetros necessários
+    file_output(test, process_function.__name__, input_item, "", expected_item, result, test_passed, execution_time)
 
 
 def engine2(input_item, expected_item, operator, test):
-    line = line_c(test, input_item, expected_item)
-    filepass(line) if operator(input_item, expected_item) else filefail(line)
+    start_time = datetime.now()
+    # O resultado é o próprio valor de input_item
+    result = input_item
+    # Verifica se o resultado satisfaz o operador de comparação
+    test_passed = operator(result, expected_item)
+    # Calcula o tempo de execução
+    execution_time = (datetime.now() - start_time).total_seconds()
+    # Chama a função de saída para arquivo e console
+    file_output(test, "No Function", input_item, "", expected_item, result, test_passed, execution_time)
 
 
 def engine3(input_item, expected_item, input2_item, process_function, operator, test):
+    start_time = datetime.now()
+    # Verifica se existe função de processamento, caso contrário, usa input_item
     if process_function is not None:
         result = process_function(input_item, input2_item)
     else:
         result = input_item
-    line = line_b(test, process_function, input_item, input2_item, result, expected_item)
-    filepass(line) if operator(result, expected_item) else filefail(line)
+    # Calcula o tempo de execução
+    execution_time = (datetime.now() - start_time).total_seconds()
+    # Verifica se o resultado satisfaz o operador de comparação
+    test_passed = operator(result, expected_item)
+    # Chama a função de saída para arquivo e console
+    file_output(test, process_function.__name__ if process_function else "No Function", input_item, input2_item,
+                expected_item, result, test_passed, execution_time)
 
 
 def dispatcher(cpus, input1, input2, expected, operator, test, process_function=None):
@@ -68,93 +89,93 @@ def dispatcher(cpus, input1, input2, expected, operator, test, process_function=
 
 def test_equal(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: x == y
-    test = "test_equal - "
+    test = "test_equal"
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_not_equal(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: x != y
-    test = "test_not_equal - "
+    test = "test_not_equal"
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_is(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: x is y
-    test = "test_is - "
+    test = "test_is"
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_is_not(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: x is not y
-    test = "test_is_not - "
+    test = "test_is_not"
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_in(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: x in y
-    test = "test_in - "
+    test = "test_in"
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_not_in(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: x not in y
-    test = "test_not_in - "
+    test = "test_not_in"
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_instance(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: isinstance(x, y)
-    test = "test_instance - "
+    test = "test_instance"
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_not_instance(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: not isinstance(x, y)
-    test = "test_not_instance - "
+    test = "test_not_instance"
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_issubclass(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: issubclass(x, y)
-    test = "test_issubclass - "
+    test = "test_issubclass"
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_not_issubclass(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: not issubclass(x, y)
-    test = "test_not_issubclass - "
+    test = "test_not_issubclass"
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_greater(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: x > y
-    test = "test_greater - "
+    test = "test_greater"
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_greater_equal(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: x >= y
-    test = "test_greater_equal - "
+    test = "test_greater_equal"
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_less(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: x < y
-    test = "test_less - "
+    test = "test_less"
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
 def test_less_equal(cpus, input1, input2, expected, process_function=None):
     operator = lambda x, y: x <= y
-    test = "test_less_equal - "
+    test = "test_less_equal"
     dispatcher(cpus, input1, input2, expected, operator, test, process_function)
 
 
-def line_a(test, ff, input, result, expected):
+def line_a(test, ff, input, result, expected, execution_time):
     return f"{test}{ff.__name__} - input: {input} - expected: {expected} - received: {result} - Result: "
 
 
-def line_b(test, ff, input, input2, result, expected):
+def line_b(test, ff, input, input2, result, expected, execution_time):
     return f"{test}{ff.__name__} - input1: {input} - input2: {input2} - expected: {expected} - received: {result} - Result: "
 
 
@@ -162,105 +183,73 @@ def line_c(test, input, received):
     return f"{test}input: {input} received: {received} - Result: "
 
 
-def get_date_time():
-    now = datetime.now()
-    return now.strftime("%Y-%m-%d %H:%M:%S")
+def file_output(test_name, tested_function, input1, input2, expected, received, test_passed, execution_time):
+    # Verifica o status do teste
+    status = "Pass" if test_passed else "Fail"
+    # Verifica input2 e ajusta se for None
+    input2 = input2 if input2 is not None else ""
+    # Gera linha final para o arquivo CSV
+    final_line_csv = f"{test_name},{tested_function},{input1},{input2},{expected},{received},{status},{execution_time:.15f}\n"
+    # Adiciona resultado no arquivo CSV
+    with file_lock:
+        with open(output_filename, 'a') as ft:
+            ft.write(final_line_csv)
+    # Exibe no console (sem alterar o formato da saída em tela)
+    print(
+        f"{test_name} - {tested_function} - input1: {input1} - input2: {input2} - expected: {expected} - received: {received} - Result: {status} - Execution Time: {execution_time:.9f} sec")
 
 
 def init():
-    if os.path.exists('filetot.txt'):
-        os.remove('filetot.txt')
+    global output_filename
+    current_datetime = datetime.now().strftime("%Y%m%d-%H%M%S")
+    output_filename = f"mtl-{current_datetime}.csv"
 
-    if os.path.exists('filepass.txt'):
-        os.remove('filepass.txt')
+    # Remove arquivo anterior, se existir
+    if os.path.exists(output_filename):
+        os.remove(output_filename)
 
-    if os.path.exists('filefail.txt'):
-        os.remove('filefail.txt')
+    # Cria arquivo com cabeçalho
+    with open(output_filename, 'w') as ft:
+        ft.write("Test Name,Tested Function,Input1,Input2,Expected,Received,Result,Execution Time (seconds)\n")
+
+    print(f"Initialized output file: {output_filename}")
 
 
 def end():
-    current_datetime = get_date_time()
-    if os.path.exists('filetot.txt'):
-        with open('filetot.txt') as f:
-            tl = len(f.readlines())
-            print(f'Total: {tl}')
-            with open('filetot.txt', 'a') as ft:
-                ft.write(f'\nTotal: {tl}\n{current_datetime}\n')
-    if os.path.exists('filepass.txt'):
-        with open('filepass.txt') as f:
-            tl = len(f.readlines())
-            print(f'Passed: {tl}')
-            with open('filepass.txt', 'a') as fp:
-                fp.write(f'\nPassed: {tl}\n{current_datetime}\n')
-    if os.path.exists('filefail.txt'):
-        with open('filefail.txt') as f:
-            tl = len(f.readlines())
-            print(f'Failed: {tl}')
-            with open('filefail.txt', 'a') as ff:
-                ff.write(f'\nFailed: {tl}\n{current_datetime}\n')
-
-
-def filepass(line):
-    line = line + 'Pass'
-    ft = open('filetot.txt', 'a')
-    ft.write(line + '\n')
-    fp = open('filepass.txt', 'a')
-    fp.write(line + '\n')
-    print(line)
-
-
-def filefail(line):
-    line = line + 'Fail'
-    ft = open('filetot.txt', 'a')
-    ft.write(line + '\n')
-    ff = open('filefail.txt', 'a')
-    ff.write(line + '\n')
-    print(line)
-
-
-def max_cpu():
-    try:
-        return os.cpu_count()
-    except NotImplementedError:
-        return 1
+    print(f"Test results saved in {output_filename}")
 
 
 def about():
     print("")
-    print("")
-    print(" Multtestlib,")
-    print(" a package developed for performing unit tests in Python using multiprocessing.")
-    print("")
-    print(" Author:  Ricardo Ribeiro de Alvarenga")
-    print("          ricardoalvarenga@ita.br")
-    print("          ITA - Instituto Tecnológico de Aeronáutica")
-    print("          Brazil")
-    print("")
-    print(" Version: 1.1 - June 2024")
-    print("          https://pypi.org/project/multtestlib/")
-    print("")
-    print("")
+    print("-------------------------------------------------------------")
+    print("Multithreaded Test Library - multtestlib 1.2")
+    print("Developed by Ricardo Ribeiro de Alvarenga, ITA, Brazil")
+    print("E-mail: ricardoalvarenga@ita.br")
+    print("-------------------------------------------------------------")
+
+
+def max_cpu():
+    print(f'Total CPU cores: {os.cpu_count()}')
 
 
 def help():
-    print("")
+    print("------------ Multtestlib 1.2 ------------------")
+    print("Command                 Description")
     print("-----------------------------------------------")
-    print("Multtestlib Command       Test")
-    print("-----------------------------------------------")
-    print("test_equal                x == y")
-    print("test_not_equal            x != y")
-    print("test_is                   x is y")
-    print("test_is_not               x is not y")
-    print("test_greater              x > y")
-    print("test_greater_equal        x >= y")
-    print("test_less                 x < y")
-    print("test_less_equal           x <= y")
-    print("test_in                   x in y")
-    print("test_not_in               x not in y")
-    print("test_instance             isinstance(x, y)")
-    print("test_not_instance         not isinstance(x, y)")
-    print("test_issubclass           issubclass(x, y)")
-    print("test_not_issubclass       not issubclass(x, y)")
+    print("test_equal               x == y")
+    print("test_not_equal           x != y")
+    print("test_is                  x is y")
+    print("test_is_not              x is not y")
+    print("test_greater             x > y")
+    print("test_greater_equal       x >= y")
+    print("test_less                x < y")
+    print("test_less_equal          x <= y")
+    print("test_in                  x in y")
+    print("test_not_in              x not in y")
+    print("test_instance            isinstance(x, y)")
+    print("test_not_instance        not isinstance(x, y)")
+    print("test_issubclass          issubclass(x, y)")
+    print("test_not_issubclass      not issubclass(x, y)")
     print("-----------------------------------------------")
     print("Additional Commands:")
     print("max_cpu()      Detects the number of CPU cores.")
