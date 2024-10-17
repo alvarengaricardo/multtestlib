@@ -46,9 +46,9 @@ subject_to_test: This parameter specifies the unit that will undergo testing. It
 Here is a code example illustrating the usage of multtestlib:
 
     # It is strongly recommended to create a test function to be called by the main() function.
+    # But, multtestlib supports any coding style in Python.
     
     import multtestlib as mtl
-
 
     # Class to be tested
     class Cube:
@@ -73,6 +73,7 @@ Here is a code example illustrating the usage of multtestlib:
     # to invoke it:
     # def method(object):
     #     return object.method()
+
     def calculate_volume(cube):
         return cube.calculate_volume()
 
@@ -86,7 +87,7 @@ Here is a code example illustrating the usage of multtestlib:
         argument_list_cube = [Cube(3), Cube(4), Cube(5)]
         expected_list_cube = [27, 64, 125]
         functions_list_cube = [calculate_volume, calculate_volume, calculate_volume]
-        cpu = 1
+        cpu = 4
         mtl.test_equal(cpu, argument_list_a, argument_list_b, expected_list, functions_list)
         mtl.test_equal(cpu, argument_list_cube, "", expected_list_cube, functions_list_cube)
 
@@ -98,13 +99,21 @@ Here is a code example illustrating the usage of multtestlib:
 
 ---
 
-## Output Files
+## Report Format and Content
 
-During the execution of the unit tests, three output files are generated containing the results of the tests performed.
+During the unit testing process, a document with the extension .csv is created which presents the results of each test carried out. The document is named in a standardized way as mtl-yymmdd-hhmmss.csv.
 
-    filepass.txt -> Contains passed tests
-    filefail.txt -> Contains failed tests
-    filetot.txt -> Contains all tests
+The test results are recorded in columns, as follows:
+
+Test Name: Is the mtl command used in the test;  
+Tested: Function or method being tested;  
+Input1: First argument (a) sent to the test;  
+Input2: Second argument (b) sent to the test;  
+Expected: Desired result after test processing;  
+Received: Value received as a result of the test;  
+Result: Pass or Fail, indicates whether the test was successful or a failure occurred;  
+Execution Time (seconds): Specific test execution time, in seconds.  
+
 
 ---
 

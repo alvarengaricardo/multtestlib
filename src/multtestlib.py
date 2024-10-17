@@ -10,54 +10,44 @@
 
     October 2024
 """
-
-
 import os
 import threading
 from concurrent.futures import ThreadPoolExecutor
+import time
 from datetime import datetime
 
 file_lock = threading.Lock()
-output_filename = None  # Variável para armazenar o nome do arquivo globalmente
+output_filename = None
 
 
 def engine1(input_item, expected_item, process_function, operator, test):
-    start_time = datetime.now()
+    start_time = time.perf_counter()
     if process_function is not None:
         result = process_function(input_item)
     else:
         result = input_item
-    execution_time = (datetime.now() - start_time).total_seconds()
+    execution_time = time.perf_counter() - start_time
     test_passed = operator(result, expected_item)
 
-    # Chama a função file_output com todos os parâmetros necessários
     file_output(test, process_function.__name__, input_item, "", expected_item, result, test_passed, execution_time)
 
 
 def engine2(input_item, expected_item, operator, test):
-    start_time = datetime.now()
-    # O resultado é o próprio valor de input_item
+    start_time = time.perf_counter()
     result = input_item
-    # Verifica se o resultado satisfaz o operador de comparação
     test_passed = operator(result, expected_item)
-    # Calcula o tempo de execução
-    execution_time = (datetime.now() - start_time).total_seconds()
-    # Chama a função de saída para arquivo e console
+    execution_time = time.perf_counter() - start_time
     file_output(test, "No Function", input_item, "", expected_item, result, test_passed, execution_time)
 
 
 def engine3(input_item, expected_item, input2_item, process_function, operator, test):
-    start_time = datetime.now()
-    # Verifica se existe função de processamento, caso contrário, usa input_item
+    start_time = time.perf_counter()
     if process_function is not None:
         result = process_function(input_item, input2_item)
     else:
         result = input_item
-    # Calcula o tempo de execução
-    execution_time = (datetime.now() - start_time).total_seconds()
-    # Verifica se o resultado satisfaz o operador de comparação
+    execution_time = time.perf_counter() - start_time  # Calcula o tempo de execução
     test_passed = operator(result, expected_item)
-    # Chama a função de saída para arquivo e console
     file_output(test, process_function.__name__ if process_function else "No Function", input_item, input2_item,
                 expected_item, result, test_passed, execution_time)
 
@@ -196,7 +186,7 @@ def file_output(test_name, tested_function, input1, input2, expected, received, 
             ft.write(final_line_csv)
     # Exibe no console (sem alterar o formato da saída em tela)
     print(
-        f"{test_name} - {tested_function} - input1: {input1} - input2: {input2} - expected: {expected} - received: {received} - Result: {status} - Execution Time: {execution_time:.9f} sec")
+        f"{test_name} - {tested_function} - Input1: {input1} - Input2: {input2} - Expected: {expected} - Received: {received} - Result: {status} - Execution Time: {execution_time:.9f} sec")
 
 
 def init():
@@ -210,7 +200,7 @@ def init():
 
     # Cria arquivo com cabeçalho
     with open(output_filename, 'w') as ft:
-        ft.write("Test Name,Tested Function,Input1,Input2,Expected,Received,Result,Execution Time (seconds)\n")
+        ft.write("Test Name,Tested,Input1,Input2,Expected,Received,Result,Execution Time (seconds)\n")
 
     print(f"Initialized output file: {output_filename}")
 
