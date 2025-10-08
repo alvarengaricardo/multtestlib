@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    multtestlib 1.2
+    multtestlib 1.2.1
     Python package for running unit tests in parallel processing.
     By Ricardo Ribeiro de Alvarenga
        ricardoalvarenga@ita.br
@@ -8,7 +8,7 @@
     ITA - Instituto Tecnológico de Aeronáutica - Brasil
           Aeronautics Institute of Thecnology  - Brazil
 
-    October 2024
+    October 2025
 """
 import os
 import threading
@@ -212,18 +212,18 @@ def end():
 def about():
     print("")
     print("-------------------------------------------------------------")
-    print("Multithreaded Test Library - multtestlib 1.2")
+    print("Multithreaded Test Library - multtestlib 1.2.1")
     print("Developed by Ricardo Ribeiro de Alvarenga, ITA, Brazil")
     print("E-mail: ricardoalvarenga@ita.br")
     print("-------------------------------------------------------------")
 
 
 def max_cpu():
-    print(f'Total CPU cores: {os.cpu_count()}')
+    return os.cpu_count()
 
 
 def help():
-    print("------------ Multtestlib 1.2 ------------------")
+    print("-------------- Multtestlib 1.2.1 --------------")
     print("Command                 Description")
     print("-----------------------------------------------")
     print("test_equal               x == y")
